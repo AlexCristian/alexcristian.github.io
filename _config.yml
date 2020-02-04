@@ -1,0 +1,22 @@
+title: Alex | Telaraña
+owner: Alex Cristian
+email: 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://acristian.eu" # the base hostname & protocol for your site, e.g. http://example.com
+language: en
+twitter_username: _AlexCristian
+github_username: AlexCristian
+disqus_username: 
+# Build settings
+markdown: kramdown
+theme: minima
+
+permalink: /:year/:month/:day/:title/
+
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle
+excerpt_separator: <!--more-->
