@@ -12,4 +12,7 @@ When I'm not stuck indoors (2021?), I love going on hikes, traveling and taking 
 
 I'm originally from Bucharest, Romania - Salut! If you'd like to reach out, we can chat in English, Spanish or Romanian at:
 
-<center>salut<span style="display: none;">REMOVE</span><code>@</code>acristian.eu</center>
+<center>
+salut<span style="display: none;">REMOVE</span><code>@</code>acristian.eu - <a href="{{site.url}}{{site.baseurl}}/assets/documents/publickey.salut@acristian.eu.asc">PGP key</a>
+</center>
+
