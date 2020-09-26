@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Puntul Palid Albastru"
+title:  "Punct Palid Albastru"
 date:   2020-09-25 23:36:00 +0200
 categories: books
 comments: false
