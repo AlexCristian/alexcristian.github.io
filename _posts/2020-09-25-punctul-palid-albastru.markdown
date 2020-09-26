@@ -24,4 +24,4 @@ I've had some trouble finding a Romanian version of Carl Sagan's Pale Blue Dot. 
 
 ![Pale Blue Dot - Earth as seen from Voyager I, 6 billion km away]({{site.url}}{{site.baseurl}}/assets/images/paledot.png){: .wide_img}
 
-[Imaginea atașată](https://en.wikipedia.org/wiki/Pale_Blue_Dot) a fost transmisă de proba spațială Voyager I, îndreptată către Pământ la o distanța de aproximativ 6 miliarde de kilometri depărtare - 14 Februarie, 1990.
+[Imaginea atașată](https://en.wikipedia.org/wiki/Pale_Blue_Dot) a fost transmisă de proba spațială Voyager I, îndreptată către Pământ la o distanța de aproximativ 6 miliarde de kilometri depărtare. Pe 14 Februarie, 1990, semnalul acestei imagini a călatorit cu viteza luminii timp de aproximativ 5 ore și 33 de minute pentru a ajunge de la Voyager la noi, pe Pământ.
