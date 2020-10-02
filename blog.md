@@ -4,6 +4,7 @@ title: Blog
 permalink: /blog/
 ---
 {% for post in site.posts %}
+  {% unless post.tags contains 'private' %}
   <div id="post-short">
     <a href="{{site.url}}{{site.baseurl}}{{post.url}}">
       <h3>{{post.title}}</h3>
@@ -17,4 +18,5 @@ permalink: /blog/
       {% endif %}
     </p>
   </div>
+  {% endunless %}
 {% endfor %}

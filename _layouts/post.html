@@ -7,6 +7,9 @@
   	{% include nav.html %}
 		<div id="content-left">
       <div id="post">
+	{% if page.tags contains 'private' %}
+	  <center class="warn-draft">You are reading a draft.</center>
+	{% endif %}
         <h2>{{ page.title }}</h2>
         <i>posted on {{ page.date | date: "%-d %b %Y" }}</i>
         {{ content }}
