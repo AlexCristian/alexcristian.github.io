@@ -3,7 +3,7 @@ layout: post
 title:  "On nationalism"
 date:   2020-09-30 10:33:00 +0200
 categories: opinion
-comments: false
+comments: true
 ---
 The idea of a Europe of nations leads down a dark path of nationalism.
 
