@@ -22,5 +22,5 @@ Another possible solution would be that of institutional guarantees. This approa
 
 Assuming transparency is beneficial to society, it would seem to follow that most public services should rely on the private sector as much as possible. It would be a straightforward way of addressing systemic corruption, which often thrives in an environment lacking of whistleblowers. Bad actors frequently exploit the inaction of their peers in order to reap massive profits, which they then invest in amassing even more power. This creates a toxic cycle of corruption that is difficult to interrupt once triggered.
 
-Checks and balances are necessary for any system to efficiently perform its functions. So far, big governments have repeatedly proven their inability to police themselves. The solution might be one that doesn't place any trust in an organization's capacity to self-police.
+Checks and balances are necessary for any system to efficiently perform its functions. So far, big governments have repeatedly proven their inability to police themselves. The solution might be not to place any trust in an organization's capacity to self-police.
 
