@@ -3,6 +3,7 @@ layout: post
 title:  "On government incentives"
 date:   2021-02-14 23:14:00 +0200
 categories: politics
+tags: private
 comments: false
 ---
 
