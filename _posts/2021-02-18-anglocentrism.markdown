@@ -21,5 +21,5 @@ I'm the odd one out. That places the burden to adapt on me, but the privilege of
 
 I touched a bit before on anglocentrism and, in my view, this is it at its crux. If you can't place value on other cultures and the ways in which live, work, grow and communicate, then at least consider recognizing what it's like for them to change what they've known their entire life, in only a few years. Put yourself in their shoes and understand. And maybe, just then, respect them while they're doing it.
 
-Food for thought: The above example would come across as patronizing in the anglosphere, but will be understood in other parts of the world as an act of intentionally reducing the complexity of an issue, either for pure humor or in order to pivot the discussion towards debating opposing points of view and their merits.
+**Food for thought**: The above example would come across as patronizing in the anglosphere, but will be understood in other parts of the world as an act of intentionally reducing the complexity of an issue, either for pure humor or in order to pivot the discussion towards debating opposing points of view and their merits.
 One interpretation creates an opportunity for growth and understanding, on a topic the first speaker could be curious to learn more about. The alternative dismisses the discussion and shuts down any hope for growth.
