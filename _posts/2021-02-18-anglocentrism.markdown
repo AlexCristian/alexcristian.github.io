@@ -7,8 +7,9 @@ tags: private
 comments: false
 ---
 
-- "Nah man, it's so simple! Just raise the minimum wage for everyone and eliminate tips that way! Problem solved."
-- "Wow, that's patronizing."
+> -- "Nah man, it's so simple! Just raise the minimum wage for everyone and eliminate tips that way! Problem solved."
+
+> -- "Wow, that's patronizing."
 
 <!--more-->
 
