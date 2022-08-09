@@ -12,7 +12,7 @@ What incentives might help reduce government corruption?
 
 Whistleblowers are an essential part of a well-functioning democracy. The public relies on people in high positions of power, who choose to jeopardize their job security in order to bring to light information of interest to society at large.
 
-The incentives to become a whistleblower are few and rapidly diminishing as the years go by. They often pay a heavy price for leaking confidential information. At best, they remain anonymous - at worst, they become fugitives, hunted by intelligence agencies for the rest of their lives.
+The incentives to become a whistleblower are few and rapidly diminishing as years go by. They often pay a heavy price for leaking confidential information. At best, they remain anonymous - at worst, they become fugitives, hunted by intelligence agencies for the rest of their lives.
 We see the least number of whistleblowers in tightly controlled industries, such as those over which the government holds a monopoly. In these cases, the worker knows they'd be virtually unemployable, should they be fired. Certain occupations are so niche that one's career would be over if they lost their current job; there's simply no one else hiring in that field.
 
 This is more obvious in some countries than others. For instance, it would be difficult for a doctor to change employers in a country with nationalized healthcare. This creates disincentives for employees that might otherwise want to blow the whistle on practices which ought to cause public alarm. Similarly, an employee at a nationalized retirement fund might be reluctant to speak out against unsustainable changes, brought about by politicians seeking to purchase the votes of seniors.
