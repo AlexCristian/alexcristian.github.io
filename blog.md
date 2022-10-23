@@ -3,7 +3,6 @@ layout: default
 title: Blog
 permalink: /blog/
 ---
-Mostly, things that come up in books I read. Counterpoints are always appreciated & stated opinions are subject to change.
 
 {% for post in site.posts %}
   {% unless post.tags contains 'private' %}
