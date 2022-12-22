@@ -4,13 +4,15 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 ---
-Hi! My name's Alex and I'm a recent CS grad from Drexel U in Philadelphia, PA.
+Hi! My name is Alex and I graduated from [Drexel](https://drexel.edu/) with a degree in Computer Science.
 
-When I'm not stuck indoors (2021?), I love going on hikes, traveling and taking walks through the city.
+I work at Google on Android NFC for Japan. Opinions on this website are mine and not of any employer, past or present.
 
-![Climbing off a tree trunk]({{site.url}}{{site.baseurl}}/assets/images/hiking.png){: .wide_img}
+I love traveling, photography and taking walks through the city. Also, hockey!
 
-I'm originally from Bucharest, Romania - Salut! If you'd like to reach out, we can chat in English, Spanish or Romanian at:
+![Sitting on a tree trunk]({{site.url}}{{site.baseurl}}/assets/images/hiking.png){: .wide_img}
+
+I'm originally from Bucharest, Romania - Salut! If you'd like to chat, write to me in English, Spanish or Romanian at:
 
 <center>
 alex<span style="display: none;">REMOVE</span><code>@</code>acristian.eu - <a href="{{site.url}}{{site.baseurl}}/assets/documents/publickey.alex@acristian.eu.asc" rel="pgpkey">🔑</a>
