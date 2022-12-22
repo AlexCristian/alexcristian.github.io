@@ -3,6 +3,7 @@ layout: default
 title: Blog
 permalink: /blog/
 ---
+Opinions are mine and not of any employer, past or present.
 
 {% for post in site.posts %}
   {% unless post.tags contains 'private' %}
