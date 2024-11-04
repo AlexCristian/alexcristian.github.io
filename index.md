@@ -12,7 +12,9 @@ I'm a senior engineer at Google working on [Wallet](https://wallet.google.com/).
 
 I love hockey, the outdoors, traveling and photography.
 
-These days, you can find me in NYC. I'm originally from Bucharest, Romania - _salut!_ If you'd like to chat, drop me a line in English, Spanish or Romanian at:
+These days, you can find me in NYC. I'm originally from Bucharest, Romania - _salut!_
+
+If you'd like to chat, drop me a line in English, Spanish or Romanian at:
 
 <center>
 alex<span style="display: none;">REMOVE</span><code>@</code>acristian.eu - <a href="{{site.url}}{{site.baseurl}}/assets/documents/publickey.alex@acristian.eu.asc" rel="pgpkey">🔑</a>
