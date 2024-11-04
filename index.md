@@ -4,15 +4,15 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 ---
-Hi! My name is Alex and I graduated from [Drexel](https://drexel.edu/) with a degree in Computer Science.
+Hi! My name is Alex and I'm a [Drexel](https://drexel.edu/) with a bachelor's degree in computer science. For my graduate study, I'm doing more CS at [Columbia](https://www.columbia.edu).
 
-![Sitting on a tree trunk]({{site.url}}{{site.baseurl}}/assets/images/hiking.png){: .wide_img}
+![Alex sitting on a tree trunk]({{site.url}}{{site.baseurl}}/assets/images/hiking.png){: .wide_img}
 
-I work at Google on Android NFC for Japan. Opinions on this website are mine and not of any employer, past or present.
+I'm a senior engineer at Google working on [Wallet](https://wallet.google.com/). Opinions on this website are mine and not of any employer, past or present.
 
-I love traveling, photography and taking walks through the city. Also, hockey!
+I love hockey, the outdoors, traveling and photography.
 
-I'm originally from Bucharest, Romania - Salut! If you'd like to chat, write to me in English, Spanish or Romanian at:
+These days, you can find me in NYC. I'm originally from Bucharest, Romania - _salut!_ If you'd like to chat, drop me a line in English, Spanish or Romanian at:
 
 <center>
 alex<span style="display: none;">REMOVE</span><code>@</code>acristian.eu - <a href="{{site.url}}{{site.baseurl}}/assets/documents/publickey.alex@acristian.eu.asc" rel="pgpkey">🔑</a>
