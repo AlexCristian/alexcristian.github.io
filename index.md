@@ -4,7 +4,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: default
 ---
-Hi! My name is Alex and I'm a [Drexel](https://drexel.edu/) with a bachelor's degree in computer science. For my graduate study, I'm doing more CS at [Columbia](https://www.columbia.edu).
+Hi! My name is Alex and I'm a [Drexel](https://drexel.edu/) graduate with a bachelor's degree in computer science. For my graduate study, I'm doing more CS at [Columbia](https://www.columbia.edu).
 
 ![Alex sitting on a tree trunk]({{site.url}}{{site.baseurl}}/assets/images/hiking.png){: .wide_img}
 
