@@ -1,3 +1,10 @@
+.warn-draft {
+   margin: 10%;
+   background-color: black;
+   color: white;
+   font-weight: bold;
+}
+
 img.emoji {
    height: 1em;
    width: 1em;
