@@ -6,9 +6,9 @@ layout: default
 ---
 Hi! My name is Alex and I'm a [Drexel](https://drexel.edu/) graduate with a bachelor's degree in computer science. For my graduate study, I'm doing more CS at [Columbia](https://www.columbia.edu).
 
-![Alex sitting on a tree trunk]({{site.url}}{{site.baseurl}}/assets/images/hiking.png){: .wide_img}
+![Alex sitting on a tree trunk]({{site.url}}{{site.baseurl}}/assets/images/hiking.webp){: .wide_img}
 
-I'm a senior engineer at Google working on [Wallet](https://wallet.google.com/). Opinions on this website are mine and not of any employer, past or present.
+I'm a senior engineer at Google working on [Wallet](https://wallet.google). Opinions on this website are mine and not of any employer, past or present.
 
 I love hockey, the outdoors, traveling and photography.
 
