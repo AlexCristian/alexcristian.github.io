@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colorado Trip · Jun 19–21</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+  :root {
+    --bg: #f7f5f0;
+    --card: #ffffff;
+    --accent: #2d5a3d;
+    --accent-light: #e8f0eb;
+    --amber: #c8773a;
+    --amber-light: #fdf3ec;
+    --sky: #2a5c7a;
+    --sky-light: #e8f2f8;
+    --slate: #4a4a4a;
+    --muted: #888;
+    --border: #e5e2db;
+    --sleep: #6b5b9e;
+    --sleep-light: #f0eef8;
+    --rest: #a07040;
+    --rest-light: #fdf7ef;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--slate);
+    line-height: 1.6;
+  }
+
+  /* ── Header ── */
+  .trip-header {
+    background: var(--accent);
+    color: white;
+    padding: 48px 40px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .trip-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Cpath d='M0 150 L60 90 L120 120 L180 60 L240 100 L300 40 L360 80 L400 50 L400 200 L0 200Z' fill='rgba(255,255,255,0.04)'/%3E%3Cpath d='M0 170 L80 110 L150 140 L220 80 L280 115 L340 70 L400 90 L400 200 L0 200Z' fill='rgba(255,255,255,0.03)'/%3E%3C/svg%3E") no-repeat bottom center / cover;
+  }
+  .trip-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    letter-spacing: -0.5px;
+    position: relative;
+  }
+  .trip-header .meta {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    position: relative;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .trip-header .meta span::before {
+    margin-right: 6px;
+  }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  /* ── Day block ── */
+  .day-block {
+    margin-bottom: 48px;
+  }
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .day-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--accent);
+  }
+  .day-date {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── Timeline ── */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 28px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 16px;
+    bottom: 16px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Drive segment ── */
+  .drive-segment {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    position: relative;
+  }
+  .drive-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--amber);
+    border: 3px solid var(--bg);
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 0 2px var(--amber);
+  }
+  .drive-pill {
+    background: var(--amber-light);
+    border: 1px solid #e8c9a8;
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 0.8rem;
+    color: var(--amber);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .drive-pill a {
+    color: var(--amber);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .drive-pill a:hover { text-decoration: underline; }
+
+  /* ── Stop card ── */
+  .stop-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 4px 0;
+    position: relative;
+    transition: box-shadow 0.2s;
+  }
+  .stop-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+  .stop-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    position: absolute;
+    left: -28px;
+    top: 22px;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .stop-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .stop-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #222;
+  }
+  .stop-time {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 500;
+    white-space: nowrap;
+    background: var(--bg);
+    padding: 3px 10px;
+    border-radius: 10px;
+  }
+  .stop-desc {
+    font-size: 0.88rem;
+    color: #666;
+    margin-top: 6px;
+    line-height: 1.55;
+  }
+  .stop-tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .tag {
+    font-size: 0.75rem;
+    padding: 3px 9px;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+  .tag-hike    { background: var(--accent-light); color: var(--accent); }
+  .tag-food    { background: #fef3e2; color: #b06a00; }
+  .tag-scenic  { background: var(--sky-light); color: var(--sky); }
+  .tag-culture { background: #f3eeff; color: #6b4fa8; }
+  .tag-water   { background: #e6f7ff; color: #0077a8; }
+
+  /* ── Buffer blocks ── */
+  .buffer-block {
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 4px 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+  }
+  .buffer-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--bg);
+  }
+  .buffer-rest  { background: var(--rest-light); color: var(--rest); }
+  .buffer-rest .buffer-dot  { background: var(--rest); box-shadow: 0 0 0 2px var(--rest); }
+  .buffer-sleep { background: var(--sleep-light); color: var(--sleep); }
+  .buffer-sleep .buffer-dot { background: var(--sleep); box-shadow: 0 0 0 2px var(--sleep); }
+  .buffer-meal  { background: #fff8e6; color: #8a6200; }
+  .buffer-meal .buffer-dot  { background: #c8a040; box-shadow: 0 0 0 2px #c8a040; }
+  .buffer-flex  { background: #f0f4f8; color: #4a6080; }
+  .buffer-flex .buffer-dot  { background: #7090b0; box-shadow: 0 0 0 2px #7090b0; }
+
+  /* ── Airbnb note ── */
+  .airbnb-note {
+    background: var(--sleep-light);
+    border: 1px solid #d0c8e8;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 4px 0;
+    font-size: 0.88rem;
+    color: var(--sleep);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+  }
+  .airbnb-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--sleep);
+    border: 3px solid var(--bg);
+    position: absolute;
+    left: -28px;
+    top: 14px;
+    box-shadow: 0 0 0 2px var(--sleep);
+  }
+  .airbnb-note strong { font-weight: 700; }
+
+  /* ── Map iframe wrapper ── */
+  .map-embed {
+    margin-top: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .map-embed iframe {
+    width: 100%;
+    height: 200px;
+    display: block;
+    border: none;
+  }
+
+  /* ── Options callout ── */
+  .options-callout {
+    background: var(--sky-light);
+    border: 1px solid #bcd8e8;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 12px 0 4px;
+    font-size: 0.85rem;
+    color: var(--sky);
+    position: relative;
+  }
+  .options-callout .buffer-dot { background: var(--sky); box-shadow: 0 0 0 2px var(--sky); }
+  .options-callout strong { color: var(--sky); font-weight: 700; }
+  .options-callout ul { margin: 6px 0 0 16px; }
+  .options-callout li { margin-bottom: 3px; }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 32px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+
+  @media (max-width: 600px) {
+    .trip-header { padding: 32px 20px; }
+    .trip-header h1 { font-size: 2rem; }
+    .container { padding: 24px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="trip-header">
+  <h1>🏔 Colorado Road Trip</h1>
+  <div class="meta">
+    <span>📅 Jun 19–21, 2026</span>
+    <span>🚗 AWD Car</span>
+    <span>📍 Base: Boulder</span>
+    <span>✈️ Depart Denver, Jun 21</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ═══════════════════════════════════
+       DAY 1 — Jun 19 (Friday)
+  ════════════════════════════════════ -->
+  <div class="day-block">
+    <div class="day-header">
+      <span class="day-label">Day 1</span>
+      <span class="day-date">Friday, June 19 · Boulder</span>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Arrive -->
+      <div class="stop-card">
+        <div class="stop-dot"></div>
+        <div class="stop-top">
+          <span class="stop-name">Arrive in Boulder</span>
+          <span class="stop-time">~Morning</span>
+        </div>
+        <div class="stop-desc">Uber from airport, settle in, grab coffee. Check into Airbnb.</div>
+        <div class="stop-tags">
+          <span class="tag tag-culture">Arrival</span>
+        </div>
+      </div>
+
+      <div class="airbnb-note">
+        <div class="airbnb-dot"></div>
+        <div><strong>🏠 Book Airbnb in:</strong> Central Boulder (Pearl Street / University Hill area) — easy walking to restaurants and trailheads. Backup: North Boulder near Chautauqua.</div>
+      </div>
+
+      <div class="buffer-block buffer-meal">
+        <div class="buffer-dot"></div>
+        🥞 Breakfast / Coffee — ~1hr
+      </div>
+
+      <!-- Drive to Chautauqua -->
+      <div class="drive-segment">
+        <div class="drive-dot"></div>
+        <div class="drive-pill">
+          🚗 ~10 min · 2.5 mi &nbsp;
+          <a href="https://www.google.com/maps/dir/Boulder+Airbnb,+Boulder,+CO/Chautauqua+Park,+Boulder,+CO" target="_blank">
+            Open in Maps ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Chautauqua -->
+      <div class="stop-card">
+        <div class="stop-dot"></div>
+        <div class="stop-top">
+          <span class="stop-name">Chautauqua Park & Flatirons</span>
+          <span class="stop-time">2–4 hrs</span>
+        </div>
+        <div class="stop-desc">Iconic Boulder hike with front-row Flatirons views. Chautauqua Trail → Bluebell Mesa loop is the classic. Moderate, well-marked, solid for a group.</div>
+        <div class="stop-tags">
+          <span class="tag tag-hike">Hike</span>
+          <span class="tag tag-scenic">Scenic</span>
+        </div>
+        <div class="map-embed">
+          <iframe
+            src="https://maps.google.com/maps?saddr=40.0150,-105.2705&daddr=39.9995,-105.2819&output=embed"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="buffer-block buffer-rest">
+        <div class="buffer-dot"></div>
+        🧘 Rest / freshen up at Airbnb — ~45 min
+      </div>
+
+      <!-- Drive to Teahouse -->
+      <div class="drive-segment">
+        <div class="drive-dot"></div>
+        <div class="drive-pill">
+          🚶 ~15 min walk / 5 min drive &nbsp;
+          <a href="https://www.google.com/maps/dir/Chautauqua+Park+Boulder/Boulder+Dushanbe+Teahouse+Boulder+CO" target="_blank">
+            Open in Maps ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Dushanbe Teahouse -->
+      <div class="stop-card">
+        <div class="stop-dot"></div>
+        <div class="stop-top">
+          <span class="stop-name">Boulder Dushanbe Teahouse</span>
+          <span class="stop-time">~1.5 hrs</span>
+        </div>
+        <div class="stop-desc">Handcrafted Persian teahouse — gift from Boulder's sister city in Tajikistan. Good lunch / late lunch. Book a reservation ahead if possible (especially weekend).</div>
+        <div class="stop-tags">
+          <span class="tag tag-food">Lunch</span>
+          <span class="tag tag-culture">Unique</span>
+        </div>
+      </div>
+
+      <!-- Pearl Street -->
+      <div class="stop-card">
+        <div class="stop-dot"></div>
+        <div class="stop-top">
+          <span class="stop-name">Pearl Street Mall</span>
+          <span class="stop-time">1–2 hrs</span>
+        </div>
+        <div class="stop-desc">Walkable outdoor mall with shops, street performers, good coffee. Chill afternoon vibe.</div>
+        <div class="stop-tags">
+          <span class="tag tag-culture">Explore</span>
+        </div>
+      </div>
+
+      <div class="buffer-block buffer-meal">
+        <div class="buffer-dot"></div>
+        🍽 Dinner — ~1.5 hrs
+      </div>
+
+      <div class="buffer-block buffer-sleep">
+        <div class="buffer-dot"></div>
+        🌙 Sleep — Boulder Airbnb
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════
+       DAY 2 — Jun 20 (Saturday)
+  ════════════════════════════════════ -->
+  <div class="day-block">
+    <div class="day-header">
+      <span class="day-label">Day 2</span>
+      <span class="day-date">Saturday, June 20 · Rocky Mountain National Park</span>
+    </div>
+
+    <div class="timeline">
+
+      <div class="buffer-block buffer-meal">
+        <div class="buffer-dot"></div>
+        ☕ Early breakfast — ~45 min · Leave by 7:30am (RMNP gets busy fast)
+      </div>
+
+      <!-- Drive to Bear Lake -->
+      <div class="drive-segment">
+        <div class="drive-dot"></div>
+        <div class="drive-pill">
+          🚗 ~1 hr 15 min · 42 mi &nbsp;
+          <a href="https://www.google.com/maps/dir/Boulder,+CO/Bear+Lake+Trailhead,+Estes+Park,+CO+80517" target="_blank">
+            Open in Maps ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Bear Lake / Emerald Lake -->
+      <div class="stop-card">
+        <div class="stop-dot"></div>
+        <div class="stop-top">
+          <span class="stop-name">Bear Lake → Dream Lake → Emerald Lake</span>
+          <span class="stop-time">3–4 hrs</span>
+        </div>
+        <div class="stop-desc">The classic RMNP loop. Bear Lake (easy, 0.6mi) → Nymph Lake → Dream Lake → Emerald Lake. Round trip ~3.6mi, 605ft gain. Stunning alpine scenery. TIMED ENTRY PERMIT required — buy in advance at recreation.gov.</div>
+        <div class="stop-tags">
+          <span class="tag tag-hike">Hike</span>
+          <span class="tag tag-scenic">Alpine</span>
+          <span class="tag tag-water">Lakes</span>
+        </div>
+        <div class="map-embed">
+          <iframe
+            src="https://maps.google.com/maps?saddr=40.0150,-105.2705&daddr=40.3119,-105.6449&output=embed"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="buffer-block buffer-meal">
+        <div class="buffer-dot"></div>
+        🥙 Packed lunch / snacks at the trailhead or Estes Park — ~1 hr
+      </div>
+
+      <!-- Drive to Estes Park -->
+      <div class="drive-segment">
+        <div class="drive-dot"></div>
+        <div class="drive-pill">
+          🚗 ~15 min · 8 mi &nbsp;
+          <a href="https://www.google.com/maps/dir/Bear+Lake+Trailhead/Estes+Park,+CO" target="_blank">
+            Open in Maps ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Estes Park options -->
+      <div class="options-callout">
+        <div class="buffer-dot"></div>
+        <strong>📍 Estes Park — Pick 1 or both (2–3 hrs total)</strong>
+        <ul>
+          <li><strong>Stanley Hotel</strong> — The Shining filming location. Tour or just walk the grounds. Creepy good.</li>
+          <li><strong>Estes Park Aerial Tramway</strong> — ~8min ride, panoramic views of the valley + peaks. Open daily.</li>
+        </ul>
+      </div>
+
+      <!-- Drive back -->
+      <div class="drive-segment">
+        <div class="drive-dot"></div>
+        <div class="drive-pill">
+          🚗 ~1 hr 15 min back to Boulder &nbsp;
+          <a href="https://www.google.com/maps/dir/Estes+Park,+CO/Boulder,+CO" target="_blank">
+            Open in Maps ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="buffer-block buffer-rest">
+        <div class="buffer-dot"></div>
+        🧖 Shower, decompress — ~1 hr
+      </div>
+
+      <div class="buffer-block buffer-meal">
+        <div class="buffer-dot"></div>
+        🍻 Dinner + drinks — ~2 hrs
+      </div>
+
+      <div class="buffer-block buffer-sleep">
+        <div class="buffer-dot"></div>
+        🌙 Sleep — Boulder Airbnb
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════
+       DAY 3 — Jun 21 (Sunday)
+  ════════════════════════════════════ -->
+  <div class="day-block">
+    <div class="day-header">
+      <span class="day-label">Day 3</span>
+      <span class="day-date">Sunday, June 21 · Denver departure</span>
+    </div>
+
+    <div class="timeline">
+
+      <div class="buffer-block buffer-meal">
+        <div class="buffer-dot"></div>
+        ☕ Breakfast + check out — ~1 hr
+      </div>
+
+      <!-- Option A: Indian Hot Springs route -->
+      <div class="options-callout">
+        <div class="buffer-dot"></div>
+        <strong>🗺 Two route options to Denver — pick based on flight time:</strong>
+        <ul>
+          <li><strong>Option A (relaxing):</strong> Boulder → Indian Hot Springs (45min) → Georgetown (15min) → Denver (45min). Soak, scenic canyon drive.</li>
+          <li><strong>Option B (dramatic scenery):</strong> Boulder → Guanella Pass / Mount Blue Sky area (1hr) → Denver (1.5hr). Epic high-altitude drive on AWD roads.</li>
+        </ul>
+      </div>
+
+      <!-- OPTION A -->
+      <div class="drive-segment">
+        <div class="drive-dot"></div>
+        <div class="drive-pill">
+          🚗 Option A: ~45 min to Idaho Springs &nbsp;
+          <a href="https://www.google.com/maps/dir/Boulder,+CO/Indian+Hot+Springs,+302+Soda+Creek+Rd,+Idaho+Springs,+CO" target="_blank">
+            Open in Maps ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="stop-card">
+        <div class="stop-dot"></div>
+        <div class="stop-top">
+          <span class="stop-name">Indian Hot Springs (Idaho Springs)</span>
+          <span class="stop-time">2–3 hrs</span>
+        </div>
+        <div class="stop-desc">Geothermal mineral pools just off I-70. Indoor cave baths + outdoor pools. Great recovery after Day 2 hiking. $25–35/person.</div>
+        <div class="stop-tags">
+          <span class="tag tag-water">Hot Springs</span>
+          <span class="tag tag-culture">Relax</span>
+        </div>
+        <div class="map-embed">
+          <iframe
+            src="https://maps.google.com/maps?saddr=40.0150,-105.2705&daddr=39.7438,-105.6796&output=embed"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- OR Option B -->
+      <div class="drive-segment">
+        <div class="drive-dot"></div>
+        <div class="drive-pill">
+          🚗 Option B: ~1 hr to Guanella Pass &nbsp;
+          <a href="https://www.google.com/maps/dir/Boulder,+CO/Guanella+Pass,+CO" target="_blank">
+            Open in Maps ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="stop-card">
+        <div class="stop-dot"></div>
+        <div class="stop-top">
+          <span class="stop-name">Guanella Pass / Mount Blue Sky</span>
+          <span class="stop-time">2–3 hrs driving + exploring</span>
+        </div>
+        <div class="stop-desc">Paved scenic byway to 11,669ft. AWD optional but comfortable. Mount Blue Sky (formerly Mt Evans) is one of the highest paved roads in North America — Summit at 14,130ft. Views are absurd. Check road open status before going.</div>
+        <div class="stop-tags">
+          <span class="tag tag-scenic">14er</span>
+          <span class="tag tag-scenic">Scenic Drive</span>
+        </div>
+        <div class="map-embed">
+          <iframe
+            src="https://maps.google.com/maps?saddr=40.0150,-105.2705&daddr=39.6003,-105.7012&output=embed"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Drive to Denver -->
+      <div class="drive-segment">
+        <div class="drive-dot"></div>
+        <div class="drive-pill">
+          🚗 ~45 min to DEN Airport &nbsp;
+          <a href="https://www.google.com/maps/dir/Idaho+Springs,+CO/Denver+International+Airport,+CO" target="_blank">
+            Open in Maps ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="stop-card">
+        <div class="stop-dot"></div>
+        <div class="stop-top">
+          <span class="stop-name">Return car + Depart Denver (DEN)</span>
+          <span class="stop-time">Allow 2+ hrs before flight</span>
+        </div>
+        <div class="stop-desc">Drop rental car, check in, done. Hertz ~$50/day, Avis ~$70/day — both at DEN.</div>
+        <div class="stop-tags">
+          <span class="tag tag-culture">Departure</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Colorado Jun 19–21 · Boulder base · AWD car · Last updated Jun 2026
+</footer>
+
+</body>
+</html>
