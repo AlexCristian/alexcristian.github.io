@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Colorado Trip · Jun 19–21</title>
+<title>Colorado Trip · Jun 19–22</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
 
@@ -1204,9 +1204,17 @@
 
     car.querySelector('.carousel-prev').addEventListener('click', () => { goTo(idx - 1); startAuto(); });
     car.querySelector('.carousel-next').addEventListener('click', () => { goTo(idx + 1); startAuto(); });
-    dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); startAuto(); }));
+    dots.forEach((d, i) => {
+      d.setAttribute('role', 'button');
+      d.setAttribute('tabindex', '0');
+      d.setAttribute('aria-label', `Slide ${i + 1}`);
+      d.addEventListener('click', () => { goTo(i); startAuto(); });
+      d.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo(i); startAuto(); } });
+    });
     if (car.hasAttribute('data-autoplay')) startAuto();
   });
+
+  document.querySelectorAll('.stop-dot, .buffer-dot, .airbnb-dot, .drive-dot').forEach(d => d.setAttribute('aria-hidden', 'true'));
 </script>
 </body>
 </html>
