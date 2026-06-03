@@ -380,6 +380,8 @@
     user-select: none;
     transition: background 0.15s, color 0.15s;
     gap: 8px;
+    width: 100%;
+    font-family: inherit;
   }
   .alt-toggle:hover { background: #e4e0d8; color: #666; }
   .alt-toggle .alt-names { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -590,12 +592,12 @@
         <div class="map-embed trail">
           <iframe
             src="https://www.komoot.com/smarttour/e2813352181/chautauqua-and-bluebell-trail-loop/embed?layout=classic&profile=1"
-            loading="lazy" scrolling="no">
+            loading="lazy">
           </iframe>
         </div>
       </div>
       <div class="alt-drawer">
-        <div class="alt-toggle"><span class="alt-names">↕ Instead: Royal Arch Trail · Green Mountain · Eldorado Canyon</span><span class="arrow">▼</span></div>
+        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Instead: Royal Arch Trail · Green Mountain · Eldorado Canyon</span><span class="arrow">▼</span></button>
         <div class="alt-content"><div class="alt-list">
           <div class="alt-item"><a href="https://www.alltrails.com/trail/us/colorado/royal-arch-trail" target="_blank"><strong>Royal Arch Trail</strong></a><span class="alt-tag">harder</span> — 3.3mi, 1,400ft gain to a dramatic natural rock arch. Much more of a workout than the loop, big payoff at the top. Same trailhead.</div>
           <div class="alt-item"><a href="https://www.alltrails.com/trail/us/colorado/green-mountain-west-trail" target="_blank"><strong>Green Mountain Summit</strong></a><span class="alt-tag">longer</span> — 5mi loop, 2,200ft gain, true 360° summit panorama. Less crowded than Chautauqua. Park on Flagstaff Rd.</div>
@@ -623,9 +625,9 @@
         </div>
         <div class="carousel" data-autoplay>
           <div class="carousel-track">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Dushanbe_Teahouse_in_Boulder.jpg" alt="Dushanbe Teahouse Boulder">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Boulder_Dushanbe_teahouse_ceiling.jpg" alt="Dushanbe Teahouse Interior Ceiling">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Boulder_Dushanbe_Teahouse_tile_detail_1.JPG" alt="Dushanbe Teahouse Tilework">
+            <img src="https://images.unsplash.com/photo-1562164494-90b7a0d86a4f?w=900&q=80&auto=format&fit=crop" alt="Ornate Persian architecture exterior">
+            <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=900&q=80&auto=format&fit=crop" alt="Ornate mosque interior ceiling tilework">
+            <img src="https://images.unsplash.com/photo-1596903096455-bd428a4b6f0a?w=900&q=80&auto=format&fit=crop" alt="Islamic ornate tilework architecture">
           </div>
           <button class="carousel-btn carousel-prev">&#8249;</button>
           <button class="carousel-btn carousel-next">&#8250;</button>
@@ -638,7 +640,7 @@
         </div>
       </div>
       <div class="alt-drawer">
-        <div class="alt-toggle"><span class="alt-names">↕ Instead: Frasca · The Kitchen · Shine Restaurant</span><span class="arrow">▼</span></div>
+        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Instead: Frasca · The Kitchen · Shine Restaurant</span><span class="arrow">▼</span></button>
         <div class="alt-content"><div class="alt-list">
           <div class="alt-item"><strong>Frasca Food & Wine</strong><span class="alt-tag">upscale</span> — James Beard-nominated Italian on Pearl Street. Dinner reservation needed weeks ahead. One of the best meals in Colorado.</div>
           <div class="alt-item"><strong>The Kitchen</strong><span class="alt-tag">casual</span> — Farm-to-table, very Boulder. Good for a group lunch, right on Pearl Street.</div>
@@ -682,7 +684,7 @@
         </div>
       </div>
       <div class="alt-drawer">
-        <div class="alt-toggle"><span class="alt-names">↕ Instead: Arkansas River (Buena Vista) · Breckenridge afternoon · skip and stay in Boulder</span><span class="arrow">▼</span></div>
+        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Instead: Arkansas River (Buena Vista) · Breckenridge afternoon · skip and stay in Boulder</span><span class="arrow">▼</span></button>
         <div class="alt-content"><div class="alt-list">
           <div class="alt-item"><strong>Arkansas River (Buena Vista)</strong><span class="alt-tag">harder</span> — Class IV–V on the Numbers or Browns Canyon. 2.5hr drive from Boulder. Better whitewater but a much longer day — consider swapping all of Day 2 for this instead.</div>
           <div class="alt-item"><strong>Breckenridge afternoon</strong><span class="alt-tag">mellow</span> — 1.5hr from Boulder. High-altitude ski town in summer: gondola, hiking, great food. Skip rafting and do this if the group wants chill over adrenaline.</div>
@@ -711,9 +713,9 @@
         </div>
         <div class="carousel" data-autoplay>
           <div class="carousel-track">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Bateria_Alegria_Performing_on_Pearl_Street_in_Boulder%2C_Colorado.jpg" alt="Street Performers on Pearl Street Boulder">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Boulder_Colorado_-_Perl_Street_Mall_-2005-10-14T204331.png" alt="Pearl Street Mall Boulder">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/An_Empty_Pearl_Street_Mall_at_Night_During_the_Height_of_COVID%2C_Boulder%2C_Colorado.jpg" alt="Pearl Street Mall at Night">
+            <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?w=900&q=80&auto=format&fit=crop" alt="Outdoor pedestrian mall street performers">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80&auto=format&fit=crop" alt="Evening storefront lights pedestrian street">
+            <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=900&q=80&auto=format&fit=crop" alt="Colorful pedestrian street outdoor scene">
           </div>
           <button class="carousel-btn carousel-prev">&#8249;</button>
           <button class="carousel-btn carousel-next">&#8250;</button>
@@ -725,7 +727,7 @@
         </div>
       </div>
       <div class="alt-drawer">
-        <div class="alt-toggle"><span class="alt-names">↕ Instead: Boulder Creek Path · CU Campus · Celestial Seasonings tour</span><span class="arrow">▼</span></div>
+        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Instead: Boulder Creek Path · CU Campus · Celestial Seasonings tour</span><span class="arrow">▼</span></button>
         <div class="alt-content"><div class="alt-list">
           <div class="alt-item"><strong>Boulder Creek Path</strong><span class="alt-tag">active</span> — 5mi paved path along Boulder Creek. Rent bikes at University Bicycles (~$35/day), cruise toward the mountains. Good option if you want to keep moving.</div>
           <div class="alt-item"><strong>CU Boulder campus walk</strong><span class="alt-tag">free</span> — Beautiful Tuscan-style sandstone buildings, one of the best-looking campuses in the US. 10min walk from Pearl St.</div>
@@ -802,12 +804,12 @@
         <div class="map-embed trail">
           <iframe
             src="https://www.komoot.com/smarttour/e2813321794/emerald-lake-trail/embed?layout=classic&profile=1"
-            loading="lazy" scrolling="no">
+            loading="lazy">
           </iframe>
         </div>
       </div>
       <div class="alt-drawer">
-        <div class="alt-toggle"><span class="alt-names">↕ Instead: Sky Pond · Twin Sisters · Trail Ridge Road drive</span><span class="arrow">▼</span></div>
+        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Instead: Sky Pond · Twin Sisters · Trail Ridge Road drive</span><span class="arrow">▼</span></button>
         <div class="alt-content"><div class="alt-list">
           <div class="alt-item"><a href="https://www.alltrails.com/trail/us/colorado/sky-pond-via-glacier-gorge-trail" target="_blank"><strong>Sky Pond via Glacier Gorge</strong></a><span class="alt-tag">harder</span> — 9.5mi, 1,800ft gain. More demanding than Emerald Lake, fewer crowds, ends at a wild glacial tarn below Taylor Peak. Full day hike — skip Estes if you do this.</div>
           <div class="alt-item"><a href="https://www.alltrails.com/trail/us/colorado/twin-sisters-peak-trail" target="_blank"><strong>Twin Sisters Peaks</strong></a><span class="alt-tag">no permit</span> — 7.4mi, 2,300ft, east side of RMNP. No timed entry permit needed. Solid summit views of Longs Peak and the park.</div>
@@ -863,12 +865,32 @@
 
       <div class="buffer-block buffer-meal">
         <div class="buffer-dot"></div>
-        🍻 6:00pm — Dinner + drinks · ~2 hrs
+        🍻 6:30pm — Dinner + drinks · ~1.5 hrs
+      </div>
+
+      <div class="stop-card">
+        <div class="stop-dot"></div>
+        <div class="stop-top">
+          <span class="stop-name">Sunset on Flagstaff Mountain</span>
+          <span class="stop-time">8:00pm – 9:15pm</span>
+        </div>
+        <div class="stop-desc">Best sunset view in Boulder — drive 10 minutes up Flagstaff Road, park at Realization Point, and watch the Flatirons turn orange against the entire Front Range. Sunset is ~8:35pm in late June; the golden hour buildup is the real show. Minimal effort after a big hiking day — this is a sit-and-soak-it-in stop. Bring a jacket, it's breezy up top.</div>
+        <div class="stop-tags">
+          <span class="tag tag-scenic">Sunset</span>
+          <span class="tag tag-scenic">Views</span>
+        </div>
+      </div>
+      <div class="alt-drawer">
+        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Instead: Pearl Street evening · Avery Brewing · Rayback Collective</span><span class="arrow">▼</span></button>
+        <div class="alt-content"><div class="alt-list">
+          <div class="alt-item"><strong>Pearl Street Evening Stroll</strong><span class="alt-tag">easy</span> — The mall comes alive after dark: street performers, patio bars, ice cream. No driving needed from your Airbnb. Best option if everyone's legs are completely done.</div>
+          <div class="alt-item"><strong>Avery Brewing / Rayback Collective</strong><span class="alt-tag">beer</span> — World-class Colorado craft beer: Avery's taproom (~15min drive north) or the Rayback outdoor food truck park in town. Perfect low-key end to a big mountain day.</div>
+        </div></div>
       </div>
 
       <div class="buffer-block buffer-sleep">
         <div class="buffer-dot"></div>
-        🌙 11:00pm — Sleep · Boulder Airbnb
+        🌙 10:00pm — Sleep · Boulder Airbnb
       </div>
 
     </div>
@@ -914,9 +936,9 @@
         </div>
         <div class="carousel" data-autoplay>
           <div class="carousel-track">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Conundrum_Soak_%288088830824%29.jpg" alt="Colorado Hot Springs Soaking">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Clear_Creek%2C_CO%2C_west_of_Golden_IMG_5443.JPG" alt="Clear Creek Canyon Colorado">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Georgetown_HFSC.jpg" alt="Georgetown Colorado">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80&auto=format&fit=crop" alt="Outdoor hot spring pool mountain scenery">
+            <img src="https://images.unsplash.com/photo-1520769945061-0a448c463865?w=900&q=80&auto=format&fit=crop" alt="Natural geothermal hot spring pool">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80&auto=format&fit=crop" alt="Hot spring mineral pool soaking">
           </div>
           <button class="carousel-btn carousel-prev">&#8249;</button>
           <button class="carousel-btn carousel-next">&#8250;</button>
@@ -929,7 +951,7 @@
         </div>
       </div>
       <div class="alt-drawer">
-        <div class="alt-toggle"><span class="alt-names">↕ Instead: Clear Creek Rafting · Georgetown Loop Railroad · Guanella Pass</span><span class="arrow">▼</span></div>
+        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Instead: Clear Creek Rafting · Georgetown Loop Railroad · Guanella Pass</span><span class="arrow">▼</span></button>
         <div class="alt-content"><div class="alt-list">
           <div class="alt-item"><strong>Clear Creek Whitewater Rafting</strong><span class="alt-tag">🌊 active</span> — Same canyon, same exit. Multiple outfitters in Idaho Springs (Clear Creek Rafting, Whitewater Excitement). Class III–IV, 1.5–3hr trips ~$50–70/person. Perfect swap if the group wants adrenaline over soaking. Book morning slot to still make Colorado Springs.</div>
           <div class="alt-item"><strong>Georgetown Loop Railroad</strong><span class="alt-tag">historic</span> — 6.5mi narrow-gauge steam train loop over the Devil's Gate bridge, ~1hr ride. Right in Georgetown, 10min from Idaho Springs. Fun quick detour.</div>
@@ -975,12 +997,12 @@
         <div class="map-embed trail">
           <iframe
             src="https://www.komoot.com/smarttour/e1191530349/palmer-and-central-garden-loop/embed?layout=classic&profile=1"
-            loading="lazy" scrolling="no">
+            loading="lazy">
           </iframe>
         </div>
       </div>
       <div class="alt-drawer">
-        <div class="alt-toggle"><span class="alt-names">↕ Also nearby: Cave of the Winds · Seven Falls · US Air Force Academy</span><span class="arrow">▼</span></div>
+        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Also nearby: Cave of the Winds · Seven Falls · US Air Force Academy</span><span class="arrow">▼</span></button>
         <div class="alt-content"><div class="alt-list">
           <div class="alt-item"><strong>Cave of the Winds Mountain Park</strong><span class="alt-tag">adventurous</span> — 20min drive. Cave tours, Via Ferrata routes, wind walker suspension bridge. Good option if the group wants more activity after Garden of the Gods.</div>
           <div class="alt-item"><strong>Seven Falls</strong><span class="alt-tag">scenic</span> — 181ft waterfall in a box canyon, accessible via short trail. ~15min from Garden of Gods. Pairs well as a quick add-on.</div>
@@ -1009,9 +1031,9 @@
         </div>
         <div class="carousel" data-autoplay>
           <div class="carousel-track">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/General_view_of_Manitou_Cliff_Dwellings_in_Phantom_Cliff_Canon%2C_Manitou_Springs%2C_Colorado._%287725176810%29.jpg" alt="Manitou Cliff Dwellings Overview">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Indian_petroglyphs_at_Manitou_Cliff_Dwellings%2C_Manitou_Springs%2C_Colorado._%287725176532%29.jpg" alt="Manitou Cliff Dwellings Petroglyphs">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Manitou_Cliff_Dwelling2.jpg" alt="Manitou Cliff Dwelling">
+            <img src="https://images.unsplash.com/photo-1565137852-015e67e14e38?w=900&q=80&auto=format&fit=crop" alt="Ancient cliff dwellings carved into rock face">
+            <img src="https://images.unsplash.com/photo-1559933498-c081483cc426?w=900&q=80&auto=format&fit=crop" alt="Ancient stone ruins archaeological site">
+            <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=900&q=80&auto=format&fit=crop" alt="Ancient hillside ruins archaeological remains">
           </div>
           <button class="carousel-btn carousel-prev">&#8249;</button>
           <button class="carousel-btn carousel-next">&#8250;</button>
@@ -1024,7 +1046,7 @@
         </div>
       </div>
       <div class="alt-drawer">
-        <div class="alt-toggle"><span class="alt-names">↕ Also: Manitou Incline · North Cheyenne Cañon · Pikes Peak Cog Railway</span><span class="arrow">▼</span></div>
+        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Also: Manitou Incline · North Cheyenne Cañon · Pikes Peak Cog Railway</span><span class="arrow">▼</span></button>
         <div class="alt-content"><div class="alt-list">
           <div class="alt-item"><a href="https://www.alltrails.com/trail/us/colorado/the-manitou-incline" target="_blank"><strong>Manitou Incline</strong></a><span class="alt-tag">brutal</span> — 2,744 steps, 2,000ft gain in under a mile. Local legend. Takes ~1hr up, 30min down. Free. For the group that wants to suffer in a good way.</div>
           <div class="alt-item"><a href="https://www.alltrails.com/trail/us/colorado/helen-hunt-falls-loop" target="_blank"><strong>North Cheyenne Cañon Park</strong></a><span class="alt-tag">free</span> — Beautiful canyon just south of town. Helen Hunt Falls is an easy 15min walk. Serious trails branch off for longer hikes.</div>
@@ -1106,8 +1128,8 @@
 
       <!-- Scenario toggle -->
       <div class="scenario-tabs">
-        <button class="scenario-tab active" onclick="switchScenario('glenwood')">🌊 Glenwood Springs + Aspen</button>
-        <button class="scenario-tab" onclick="switchScenario('mesaverde')">🏛 Mesa Verde</button>
+        <button class="scenario-tab active" onclick="switchScenario('glenwood', this)">🌊 Glenwood Springs + Aspen</button>
+        <button class="scenario-tab" onclick="switchScenario('mesaverde', this)">🏛 Mesa Verde</button>
       </div>
 
       <!-- ── SCENARIO A: Glenwood Springs + Aspen ── -->
@@ -1256,7 +1278,7 @@
         </div>
       </div>
       <div class="alt-drawer">
-        <div class="alt-toggle"><span class="alt-names">↕ Also: Box Canyon Falls · Imogene Pass · Telluride</span><span class="arrow">▼</span></div>
+        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Also: Box Canyon Falls · Imogene Pass · Telluride</span><span class="arrow">▼</span></button>
         <div class="alt-content"><div class="alt-list">
           <div class="alt-item"><strong>Box Canyon Falls</strong><span class="alt-tag">quick add</span> — 5min walk from downtown Ouray into a sheer narrow gorge with a waterfall. $5/person. Genuinely dramatic, takes 30min. Do it after the hot springs.</div>
           <div class="alt-item"><strong>Imogene Pass (Jeep road)</strong><span class="alt-tag">AWD needed</span> — Unpaved road from Ouray over a 13,114ft pass to Telluride. Roughly 2.5hr one way. Epic high-alpine scenery, some exposure. AWD is sufficient for most of it in summer but parts are rough.</div>
@@ -1303,7 +1325,7 @@
         </div>
       </div>
       <div class="alt-drawer">
-        <div class="alt-toggle"><span class="alt-names">↕ Also at Mesa Verde: Balcony House · Spruce Tree House · Durango–Silverton Railroad</span><span class="arrow">▼</span></div>
+        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Also at Mesa Verde: Balcony House · Spruce Tree House · Durango–Silverton Railroad</span><span class="arrow">▼</span></button>
         <div class="alt-content"><div class="alt-list">
           <div class="alt-item"><strong>Balcony House Tour</strong><span class="alt-tag">adventurous</span> — Cliff dwelling requiring a 32ft ladder climb and crawling through a tunnel. More physically demanding than Cliff Palace. Book separately at recreation.gov. Same price.</div>
           <div class="alt-item"><strong>Spruce Tree House</strong><span class="alt-tag">self-guided</span> — Third largest cliff dwelling in the park. No ranger tour needed — you walk down to it yourself. Good if ranger tours are sold out.</div>
@@ -1352,11 +1374,11 @@
 </footer>
 
 <script>
-  function switchScenario(name) {
+  function switchScenario(name, tabEl) {
     document.querySelectorAll('.scenario-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.scenario-tab').forEach(t => t.classList.remove('active'));
     document.getElementById('panel-' + name).classList.add('active');
-    event.target.classList.add('active');
+    tabEl.classList.add('active');
     // re-init carousels in newly shown panel
     document.querySelectorAll('#panel-' + name + ' .carousel').forEach(car => {
       const track = car.querySelector('.carousel-track');
@@ -1370,7 +1392,18 @@
     btn.addEventListener('click', () => {
       btn.classList.toggle('open');
       btn.nextElementSibling.classList.toggle('open');
+      btn.setAttribute('aria-expanded', btn.classList.contains('open'));
     });
+  });
+
+  document.querySelectorAll('a[target="_blank"]').forEach(a => { a.rel = 'noopener noreferrer'; });
+
+  document.querySelectorAll('iframe').forEach((fr, i) => {
+    if (!fr.title) {
+      if (fr.src.includes('komoot')) fr.title = 'Trail map';
+      else if (fr.src.includes('maps.google') || fr.src.includes('google.com/maps')) fr.title = 'Driving directions map';
+      else fr.title = 'Map';
+    }
   });
 
   document.querySelectorAll('.carousel').forEach(car => {
@@ -1378,6 +1411,15 @@
     const imgs = track.querySelectorAll('img');
     const dots = car.querySelectorAll('.dot');
     let idx = 0, timer;
+
+    car.querySelector('.carousel-prev').setAttribute('aria-label', 'Previous photo');
+    car.querySelector('.carousel-next').setAttribute('aria-label', 'Next photo');
+
+    dots.forEach((d, i) => {
+      d.setAttribute('role', 'button');
+      d.setAttribute('tabindex', '0');
+      d.setAttribute('aria-label', 'Photo ' + (i + 1));
+    });
 
     function goTo(n) {
       idx = ((n % imgs.length) + imgs.length) % imgs.length;
@@ -1391,9 +1433,15 @@
 
     car.querySelector('.carousel-prev').addEventListener('click', () => { goTo(idx - 1); startAuto(); });
     car.querySelector('.carousel-next').addEventListener('click', () => { goTo(idx + 1); startAuto(); });
-    dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); startAuto(); }));
+    dots.forEach((d, i) => {
+      d.addEventListener('click', () => { goTo(i); startAuto(); });
+      d.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo(i); startAuto(); } });
+    });
     if (car.hasAttribute('data-autoplay')) startAuto();
   });
+
+  // Mark decorative timeline/card dots as presentational
+  document.querySelectorAll('.stop-dot, .drive-dot, .buffer-dot, .airbnb-dot').forEach(d => d.setAttribute('aria-hidden', 'true'));
 </script>
 </body>
 </html>
