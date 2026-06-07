@@ -321,37 +321,6 @@
   .options-callout ul { margin: 6px 0 0 16px; }
   .options-callout li { margin-bottom: 3px; }
 
-  /* ── Day 4 scenario toggle ── */
-  .scenario-tabs {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
-    background: var(--accent-light);
-    border-radius: 10px;
-    padding: 5px;
-  }
-  .scenario-tab {
-    flex: 1;
-    padding: 8px 14px;
-    border: none;
-    border-radius: 7px;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-    background: transparent;
-    color: var(--accent);
-  }
-  .scenario-tab.active {
-    background: var(--accent);
-    color: white;
-    box-shadow: 0 2px 6px rgba(45,90,61,0.25);
-  }
-  .scenario-tab:not(.active):hover { background: rgba(45,90,61,0.1); }
-  .scenario-panel { display: none; }
-  .scenario-panel.active { display: block; }
-
   /* ── Footer ── */
   footer {
     text-align: center;
@@ -1085,26 +1054,26 @@
         </div>
       </div>
 
-      <!-- Group B drives south -->
+      <!-- Group B drives to Glenwood Springs -->
       <div class="drive-segment">
         <div class="drive-dot"></div>
         <div class="drive-pill">
-          🚗 Group B: ~2 hrs south toward Pueblo / Trinidad &nbsp;
-          <a href="https://www.google.com/maps/dir/Denver+International+Airport,+CO/Pueblo,+CO" target="_blank">
+          🚗 Group B: ~2.5 hrs west to Glenwood Springs &nbsp;
+          <a href="https://www.google.com/maps/dir/Denver+International+Airport,+CO/Glenwood+Springs,+CO" target="_blank">
             Open in Maps ↗
           </a>
         </div>
-        <div class="map-embed"><iframe src="https://maps.google.com/maps?saddr=39.8561,-104.6737&daddr=38.2544,-104.6091&output=embed" loading="lazy"></iframe></div>
+        <div class="map-embed"><iframe src="https://maps.google.com/maps?saddr=39.8561,-104.6737&daddr=39.5505,-107.3247&output=embed" loading="lazy"></iframe></div>
       </div>
 
       <div class="airbnb-note">
         <div class="airbnb-dot"></div>
-        <div><strong>🏠 Group B: Book Airbnb in Pueblo or Trinidad</strong> — halfway point between Denver and Mesa Verde. ~$80–120/night. Early start needed Monday for Mesa Verde.</div>
+        <div><strong>🏠 Group B: Book Airbnb in Glenwood Springs</strong> — Hotel Denver or Glenwood Hot Springs Lodge (lets you hit the pool first thing Monday morning). ~$100–150/night. Arrive ~11:30pm.</div>
       </div>
 
       <div class="buffer-block buffer-sleep">
         <div class="buffer-dot"></div>
-        🌙 ~11:30pm — Sleep · Pueblo area Airbnb (Group B only)
+        🌙 ~11:30pm — Sleep · Glenwood Springs (Group B only)
       </div>
 
     </div>
@@ -1127,24 +1096,10 @@
 
     <div class="timeline">
 
-      <!-- Scenario toggle -->
-      <div class="scenario-tabs">
-        <button class="scenario-tab active" onclick="switchScenario('glenwood', this)">🌊 Glenwood Springs + Aspen</button>
-        <button class="scenario-tab" onclick="switchScenario('mesaverde', this)">🏛 Mesa Verde</button>
+      <div class="buffer-block buffer-meal">
+        <div class="buffer-dot"></div>
+        ☕ 9:00am — Breakfast in Glenwood Springs · ~1 hr
       </div>
-
-      <!-- ── SCENARIO A: Glenwood Springs + Aspen ── -->
-      <div class="scenario-panel active" id="panel-glenwood">
-
-        <div class="airbnb-note">
-          <div class="airbnb-dot"></div>
-          <div><strong>🌙 Sunday night:</strong> Drive from Denver → Glenwood Springs (~2.5 hrs, arrive ~11:30pm). Book a motel/Airbnb in Glenwood Springs — <strong>Hotel Denver</strong> or <strong>Glenwood Hot Springs Lodge</strong> (lets you hit the pool first thing).</div>
-        </div>
-
-        <div class="buffer-block buffer-meal">
-          <div class="buffer-dot"></div>
-          ☕ 9:00am — Breakfast in Glenwood Springs · ~1 hr
-        </div>
 
         <!-- Glenwood Hot Springs -->
         <div class="stop-card">
@@ -1231,139 +1186,6 @@
           </div>
         </div>
 
-      </div>
-
-      <!-- ── SCENARIO B: Mesa Verde ── -->
-      <div class="scenario-panel" id="panel-mesaverde">
-
-        <div class="buffer-block buffer-meal">
-          <div class="buffer-dot"></div>
-          ☕ 6:30am — Early breakfast + hit the road · ~30 min (this is a long drive day)
-        </div>
-
-        <!-- Drive to Ouray -->
-      <div class="drive-segment">
-        <div class="drive-dot"></div>
-        <div class="drive-pill">
-          🚗 ~3 hrs · Pueblo → Ouray via US-50 &nbsp;
-          <a href="https://www.google.com/maps/dir/Pueblo,+CO/Ouray,+CO" target="_blank">
-            Open in Maps ↗
-          </a>
-        </div>
-        <div class="map-embed">
-          <iframe src="https://maps.google.com/maps?saddr=38.2544,-104.6091&daddr=38.0228,-107.6716&output=embed" loading="lazy"></iframe>
-        </div>
-      </div>
-
-      <!-- Ouray Hot Springs -->
-      <div class="stop-card">
-        <div class="stop-dot"></div>
-        <div class="stop-top">
-          <span class="stop-name">Ouray Hot Springs Pool</span>
-          <span class="stop-time">10:00am – 12:00pm</span>
-        </div>
-        <div class="carousel" data-autoplay>
-          <div class="carousel-track">
-            <img src="https://images.unsplash.com/photo-1462030138687-33e8ece2d858?w=900&q=80&auto=format&fit=crop" alt="Ouray Colorado mountain">
-            <img src="https://images.unsplash.com/photo-1514047150296-3317b9fb576b?w=900&q=80&auto=format&fit=crop" alt="Milky Way above Red Mountains near Ouray">
-            <img src="https://images.unsplash.com/photo-1668033192213-2186ca720803?w=900&q=80&auto=format&fit=crop" alt="River through valley near Ouray">
-          </div>
-          <button class="carousel-btn carousel-prev">&#8249;</button>
-          <button class="carousel-btn carousel-next">&#8250;</button>
-          <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-        </div>
-        <div class="stop-desc">Ouray is called the "Switzerland of America" — a tiny mountain town ringed by 13,000ft peaks. The hot springs pool is the main attraction: geothermal, Olympic-size, views of the canyon walls. $20/person. Worth the detour.</div>
-        <div class="stop-tags">
-          <span class="tag tag-water">Hot Springs</span>
-          <span class="tag tag-scenic">Alpine Town</span>
-        </div>
-      </div>
-      <div class="alt-drawer">
-        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Also: Box Canyon Falls · Imogene Pass · Telluride</span><span class="arrow">▼</span></button>
-        <div class="alt-content"><div class="alt-list">
-          <div class="alt-item"><strong>Box Canyon Falls</strong><span class="alt-tag">quick add</span> — 5min walk from downtown Ouray into a sheer narrow gorge with a waterfall. $5/person. Genuinely dramatic, takes 30min. Do it after the hot springs.</div>
-          <div class="alt-item"><strong>Imogene Pass (Jeep road)</strong><span class="alt-tag">AWD needed</span> — Unpaved road from Ouray over a 13,114ft pass to Telluride. Roughly 2.5hr one way. Epic high-alpine scenery, some exposure. AWD is sufficient for most of it in summer but parts are rough.</div>
-          <div class="alt-item"><strong>Telluride</strong><span class="alt-tag">detour</span> — 1hr from Ouray via paved highway. Stunning ski-town-in-a-box-canyon, free gondola to Mountain Village, great restaurants. Worth the detour if Mesa Verde timing allows.</div>
-        </div></div>
-      </div>
-
-      <!-- Drive to Mesa Verde -->
-      <div class="drive-segment">
-        <div class="drive-dot"></div>
-        <div class="drive-pill">
-          🚗 ~2 hrs · Ouray → Mesa Verde NP &nbsp;
-          <a href="https://www.google.com/maps/dir/Ouray,+CO/Mesa+Verde+National+Park,+CO" target="_blank">
-            Open in Maps ↗
-          </a>
-        </div>
-        <div class="map-embed">
-          <iframe src="https://maps.google.com/maps?saddr=38.0228,-107.6716&daddr=37.1853,-108.4618&output=embed" loading="lazy"></iframe>
-        </div>
-      </div>
-
-      <!-- Mesa Verde -->
-      <div class="stop-card">
-        <div class="stop-dot"></div>
-        <div class="stop-top">
-          <span class="stop-name">Mesa Verde National Park</span>
-          <span class="stop-time">2:00pm – 5:30pm</span>
-        </div>
-        <div class="carousel" data-autoplay>
-          <div class="carousel-track">
-            <img src="https://images.unsplash.com/photo-1581540529508-1c4e18232470?w=900&q=80&auto=format&fit=crop" alt="Mesa Verde National Park cliff dwellings">
-            <img src="https://images.unsplash.com/photo-1581540529586-e28d24840327?w=900&q=80&auto=format&fit=crop" alt="Mesa Verde ancient structures">
-            <img src="https://images.unsplash.com/photo-1697425045309-ac28b5a0826b?w=900&q=80&auto=format&fit=crop" alt="Aerial view of cliff dwelling Mesa Verde">
-          </div>
-          <button class="carousel-btn carousel-prev">&#8249;</button>
-          <button class="carousel-btn carousel-next">&#8250;</button>
-          <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-        </div>
-        <div class="stop-desc">Ancestral Puebloan cliff dwellings — UNESCO World Heritage Site. <strong>Cliff Palace</strong> is the main event: a 150-room cliff dwelling only accessible via ranger-led tour (~1hr, $5/person, must book ahead). <strong>Chapin Mesa loop</strong> for additional viewpoints. The park road itself is dramatic — high mesa with canyon views in every direction.</div>
-        <div class="stop-tags">
-          <span class="tag tag-culture">UNESCO</span>
-          <span class="tag tag-scenic">Cliffs</span>
-          <span class="tag tag-culture">History</span>
-        </div>
-      </div>
-      <div class="alt-drawer">
-        <button class="alt-toggle" type="button" aria-expanded="false"><span class="alt-names">↕ Also at Mesa Verde: Balcony House · Spruce Tree House · Durango–Silverton Railroad</span><span class="arrow">▼</span></button>
-        <div class="alt-content"><div class="alt-list">
-          <div class="alt-item"><strong>Balcony House Tour</strong><span class="alt-tag">adventurous</span> — Cliff dwelling requiring a 32ft ladder climb and crawling through a tunnel. More physically demanding than Cliff Palace. Book separately at recreation.gov. Same price.</div>
-          <div class="alt-item"><strong>Spruce Tree House</strong><span class="alt-tag">self-guided</span> — Third largest cliff dwelling in the park. No ranger tour needed — you walk down to it yourself. Good if ranger tours are sold out.</div>
-          <div class="alt-item"><strong>Durango & Silverton Narrow Gauge Railroad</strong><span class="alt-tag">full day swap</span> — 1hr from Mesa Verde. Historic steam train through the San Juan Mountains to Silverton, full day round trip. If you swap Mesa Verde for this, you won't regret it — but it's a completely different vibe.</div>
-        </div></div>
-      </div>
-
-      <div class="buffer-block buffer-meal">
-        <div class="buffer-dot"></div>
-        🍽 5:30pm — Dinner in Cortez (nearest town, 10min from park) · ~1 hr
-      </div>
-
-      <!-- Drive back to Denver -->
-      <div class="drive-segment">
-        <div class="drive-dot"></div>
-        <div class="drive-pill">
-          🚗 ~6 hrs back to Denver · Leave by 6:30pm &nbsp;
-          <a href="https://www.google.com/maps/dir/Mesa+Verde+National+Park,+CO/Denver+International+Airport,+CO" target="_blank">
-            Open in Maps ↗
-          </a>
-        </div>
-        <div class="map-embed"><iframe src="https://maps.google.com/maps?saddr=37.1853,-108.4618&daddr=39.8561,-104.6737&output=embed" loading="lazy"></iframe></div>
-      </div>
-
-      <div class="stop-card">
-        <div class="stop-dot"></div>
-        <div class="stop-top">
-          <span class="stop-name">Return car + Depart DEN</span>
-          <span class="stop-time">Arrive ~12:30am Tue</span>
-        </div>
-        <div class="stop-desc">Long drive back on I-25 N. Split driving if possible. Drop car at DEN. Book a late flight or early Tue morning flight — don't try to catch a Monday evening flight from Mesa Verde.</div>
-        <div class="stop-tags">
-          <span class="tag tag-culture">Group B departs</span>
-        </div>
-      </div>
-
-      </div><!-- end panel-mesaverde -->
 
     </div>
   </div>
@@ -1375,20 +1197,6 @@
 </footer>
 
 <script>
-  function switchScenario(name, tabEl) {
-    document.querySelectorAll('.scenario-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.scenario-tab').forEach(t => t.classList.remove('active'));
-    document.getElementById('panel-' + name).classList.add('active');
-    tabEl.classList.add('active');
-    // re-init carousels in newly shown panel
-    document.querySelectorAll('#panel-' + name + ' .carousel').forEach(car => {
-      const track = car.querySelector('.carousel-track');
-      const dots = car.querySelectorAll('.dot');
-      if (track) { track.style.transform = 'translateX(0)'; }
-      dots.forEach((d, i) => d.classList.toggle('active', i === 0));
-    });
-  }
-
   document.querySelectorAll('.alt-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
       btn.classList.toggle('open');
