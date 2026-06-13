@@ -511,6 +511,7 @@
   .bc-urgency.red    { background: #d63c3c; box-shadow: 0 0 0 2px rgba(214,60,60,0.2); }
   .bc-urgency.amber  { background: var(--amber); box-shadow: 0 0 0 2px rgba(200,119,58,0.2); }
   .bc-urgency.green  { background: #4e9460; box-shadow: 0 0 0 2px rgba(78,148,96,0.2); }
+  .bc-urgency.blue   { background: var(--sky); box-shadow: 0 0 0 2px rgba(42,92,122,0.2); }
   .bc-name { font-size: 0.86rem; font-weight: 600; color: #2a2a2a; line-height: 1.4; }
   .bc-name a { color: #2a2a2a; text-decoration: none; }
   .bc-name a:hover { text-decoration: underline; }
@@ -550,15 +551,15 @@
   ════════════════════════════════════ -->
   <div class="booking-checklist">
     <div class="bc-heading">📋 Book Before You Go</div>
-    <div class="bc-subtitle">🔴 = sells out fast — book the moment dates are confirmed &nbsp;·&nbsp; 🟡 = book 2–4 weeks out &nbsp;·&nbsp; 🟢 = walk-in / pay at gate OK</div>
+    <div class="bc-subtitle">🔴 sells out — book immediately &nbsp;·&nbsp; 🟡 book 2–4 weeks out &nbsp;·&nbsp; 🟢 walk-in / pay at gate &nbsp;·&nbsp; 🔵 only needed if you choose that alt</div>
 
-    <div class="bc-section">🔴 Sells out — book immediately</div>
+    <div class="bc-section">🔴 Sells out — book the moment dates are confirmed</div>
 
     <div class="bc-row">
       <span class="bc-urgency red"></span>
       <div>
-        <div class="bc-name"><a href="https://www.recreation.gov" target="_blank">RMNP "Timed Entry + Bear Lake Road Corridor" permit ↗</a></div>
-        <div class="bc-meta">~4 weeks out · $2/vehicle · sells within minutes of monthly batch opening · recreation.gov · <strong>must get this specific permit type</strong> or private vehicles are turned back</div>
+        <div class="bc-name"><a href="https://www.recreation.gov/timed-entry/10086910" target="_blank">RMNP "Timed Entry + Bear Lake Road Corridor" permit ↗</a></div>
+        <div class="bc-meta">~4 weeks out · $2/vehicle · sells within minutes of monthly batch opening · <strong>must be this specific permit type</strong> — standard timed entry won't let you drive to Bear Lake</div>
       </div>
       <span class="bc-day">Day 2</span>
     </div>
@@ -566,7 +567,25 @@
     <div class="bc-row">
       <span class="bc-urgency red"></span>
       <div>
-        <div class="bc-name"><a href="https://www.cograilway.com" target="_blank">Pikes Peak Cog Railway ↗</a> <span style="font-weight:400;color:#9a6030;font-size:0.78rem;">(if chosen over Manitou Springs walkabout)</span></div>
+        <div class="bc-name"><a href="https://www.recreation.gov/timed-entry/10088647" target="_blank">RMNP Hiker Shuttle ↗</a> <span style="font-weight:400;color:#9a6030;font-size:0.78rem;">(if not driving — book this instead of the vehicle permit above)</span></div>
+        <div class="bc-meta">Released May 1 for June dates + nightly drop at 7pm MDT for next day · $2/person (up to 4/reservation) · sells out fast on summer Saturdays · recreation.gov</div>
+      </div>
+      <span class="bc-day">Day 2</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency red"></span>
+      <div>
+        <div class="bc-name"><a href="https://www.visitmaroonbells.com" target="_blank">Maroon Bells RFTA Shuttle — advance reservation ↗</a> — Group B</div>
+        <div class="bc-meta">Book ahead · ~$16/adult roundtrip · day-of availability is very limited in summer · departs Aspen Highlands; runs every ~15 min · <strong>even if not driving, the shuttle needs a reservation</strong></div>
+      </div>
+      <span class="bc-day">Day 4</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency red"></span>
+      <div>
+        <div class="bc-name"><a href="https://www.cograilway.com" target="_blank">Pikes Peak Cog Railway ↗</a> <span style="font-weight:400;color:#9a6030;font-size:0.78rem;">(if chosen over Manitou walkabout)</span></div>
         <div class="bc-meta">Weeks ahead · ~$40/person · sells out · departs Manitou Springs, 3.5hr round trip</div>
       </div>
       <span class="bc-day">Day 3</span>
@@ -575,8 +594,8 @@
     <div class="bc-row">
       <span class="bc-urgency red"></span>
       <div>
-        <div class="bc-name">Frasca Food &amp; Wine reservation <span style="font-weight:400;color:#9a6030;font-size:0.78rem;">(if chosen as dinner alt)</span></div>
-        <div class="bc-meta">Weeks to months ahead · James Beard–nominated · book via OpenTable or direct</div>
+        <div class="bc-name">Frasca Food &amp; Wine <span style="font-weight:400;color:#9a6030;font-size:0.78rem;">(if chosen as dinner alt)</span></div>
+        <div class="bc-meta">Weeks to months ahead · James Beard–nominated · OpenTable or direct</div>
       </div>
       <span class="bc-day">Day 1–2</span>
     </div>
@@ -604,8 +623,17 @@
     <div class="bc-row">
       <span class="bc-urgency amber"></span>
       <div>
+        <div class="bc-name"><a href="https://www.recreation.gov" target="_blank">America the Beautiful Annual Pass ↗</a></div>
+        <div class="bc-meta">Buy before trip · $80/person · covers RMNP entry ($35) + any other NPS sites · pays for itself after 2–3 park entries</div>
+      </div>
+      <span class="bc-day">Pre-trip</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency amber"></span>
+      <div>
         <div class="bc-name">Clear Creek Whitewater Rafting — 4pm afternoon slot</div>
-        <div class="bc-meta">1–2 weeks out · ~$60–80/person · outfitters: Clear Creek Rafting, AVA, Blazing Adventures · afternoon slots fill fast</div>
+        <div class="bc-meta">1–2 weeks out · ~$60–80/person · outfitters: Clear Creek Rafting, AVA Rafting, Blazing Adventures · afternoon slots fill fast</div>
       </div>
       <span class="bc-day">Day 1</span>
     </div>
@@ -614,7 +642,7 @@
       <span class="bc-urgency amber"></span>
       <div>
         <div class="bc-name">Boulder Dushanbe Teahouse — lunch reservation</div>
-        <div class="bc-meta">1–2 weeks out · 1pm seating · busy on Fridays · call ahead or OpenTable</div>
+        <div class="bc-meta">1–2 weeks out · 1pm seating · busy on Fridays · OpenTable or call ahead</div>
       </div>
       <span class="bc-day">Day 1</span>
     </div>
@@ -631,8 +659,8 @@
     <div class="bc-row">
       <span class="bc-urgency amber"></span>
       <div>
-        <div class="bc-name"><a href="https://www.recreation.gov" target="_blank">Maroon Bells timed-entry vehicle permit ↗</a> — Group B <span style="font-weight:400;color:#9a6030;font-size:0.78rem;">(or skip and take the shuttle)</span></div>
-        <div class="bc-meta">1–2 weeks out · $10/vehicle · required 8am–5pm · alternative: RFTA shuttle from Aspen Highlands ~$8 roundtrip, no permit needed</div>
+        <div class="bc-name"><a href="https://www.recreation.gov" target="_blank">Maroon Bells timed-entry vehicle permit ↗</a> — Group B <span style="font-weight:400;color:#9a6030;font-size:0.78rem;">(alternative to shuttle above)</span></div>
+        <div class="bc-meta">1–2 weeks out · $10/vehicle · required for private vehicles 8am–5pm</div>
       </div>
       <span class="bc-day">Day 4</span>
     </div>
@@ -643,7 +671,7 @@
       <span class="bc-urgency green"></span>
       <div>
         <div class="bc-name">RMNP park entry fee</div>
-        <div class="bc-meta">Pay at gate or advance · $35/vehicle · separate from timed-entry permit above</div>
+        <div class="bc-meta">Pay at gate · $35/vehicle · separate from the timed-entry permit above · covered by America the Beautiful pass</div>
       </div>
       <span class="bc-day">Day 2</span>
     </div>
@@ -652,7 +680,7 @@
       <span class="bc-urgency green"></span>
       <div>
         <div class="bc-name">Indian Hot Springs — admission</div>
-        <div class="bc-meta">Walk-in OK · confirm hours in advance · ~$25–35/person</div>
+        <div class="bc-meta">Walk-in OK · ~$25–35/person · confirm hours in advance · private baths need reservations if you want those</div>
       </div>
       <span class="bc-day">Day 3</span>
     </div>
@@ -661,9 +689,74 @@
       <span class="bc-urgency green"></span>
       <div>
         <div class="bc-name">Glenwood Hot Springs Pool — Group B</div>
-        <div class="bc-meta">Walk-in OK · ~$38–55/person · Vapor Caves add-on ~$18 extra</div>
+        <div class="bc-meta">Walk-in OK · ~$38–55/person · Yampah Vapor Caves nearby (~$18–25, separate facility, reservations recommended)</div>
       </div>
       <span class="bc-day">Day 4</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency green"></span>
+      <div>
+        <div class="bc-name">Flagstaff Mountain — parking</div>
+        <div class="bc-meta">No advance booking · $5/day non-Boulder-County plates · pay via ParkMobile or on-site kiosk</div>
+      </div>
+      <span class="bc-day">Day 2</span>
+    </div>
+
+    <div class="bc-section">🔵 Alt activities — only if you swap these in</div>
+
+    <div class="bc-row">
+      <span class="bc-urgency blue"></span>
+      <div>
+        <div class="bc-name"><a href="https://cpwshop.com" target="_blank">Eldorado Canyon State Park — timed vehicle entry ↗</a></div>
+        <div class="bc-meta">Required Sat/Sun May–Oct · up to 30 days ahead · $10/vehicle in-state, $15 out-of-state · cpwshop.com</div>
+      </div>
+      <span class="bc-day">Day 1 alt</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency blue"></span>
+      <div>
+        <div class="bc-name"><a href="https://www.stanleyhotel.com/activities/hotel-tours" target="_blank">Stanley Hotel tour ↗</a></div>
+        <div class="bc-meta">Book ahead · sells out · $30/person + $10 parking (with $5 credit) · stanleyhotel.com</div>
+      </div>
+      <span class="bc-day">Day 2 alt</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency blue"></span>
+      <div>
+        <div class="bc-name"><a href="https://www.caveofthewinds.com" target="_blank">Cave of the Winds ↗</a></div>
+        <div class="bc-meta">1–2 days minimum; summer sells out same-day at gate · $30–47/person depending on tour · caveofthewinds.com</div>
+      </div>
+      <span class="bc-day">Day 3 alt</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency blue"></span>
+      <div>
+        <div class="bc-name"><a href="https://coloradosprings.gov" target="_blank">Manitou Incline — free timed-entry ↗</a></div>
+        <div class="bc-meta">Monthly batch, fills fast · free · coloradosprings.gov Aluvii store</div>
+      </div>
+      <span class="bc-day">Day 3 alt</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency blue"></span>
+      <div>
+        <div class="bc-name"><a href="https://www.georgetownlooprr.com" target="_blank">Georgetown Loop Railroad ↗</a></div>
+        <div class="bc-meta">Book 1 week+ ahead · weekend trains sell out · ~$30–40/adult · georgetownlooprr.com</div>
+      </div>
+      <span class="bc-day">Day 3 alt</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency blue"></span>
+      <div>
+        <div class="bc-name"><a href="https://visitglenwood.com/hanginglake" target="_blank">Hanging Lake hiking permit ↗</a></div>
+        <div class="bc-meta">Summer slots fill weeks out · $12/person · visitglenwood.com/hanginglake</div>
+      </div>
+      <span class="bc-day">Day 4 alt</span>
     </div>
 
   </div>
@@ -1332,7 +1425,7 @@
             <button class="carousel-btn carousel-next">&#8250;</button>
             <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span></div>
           </div>
-          <div class="stop-desc"><strong>Maroon Bells</strong> — the most photographed peaks in North America. Twin 14,000ft summits reflected in Maroon Lake. Easy 1.8mi loop trail around the lake, or just the viewpoint. <strong>Access (8am–5pm):</strong> private vehicles need a $10/vehicle timed-entry permit to drive in, otherwise take the RFTA shuttle from Aspen Highlands (~$8 roundtrip, runs every ~15 min). Back in Aspen: great town for a quick lunch/coffee — try <strong>Jour de Fête</strong> for pastries or grab a bite on the pedestrian mall. Aspen is fancy but walkable and the mountains are free. <strong>⚠️ Hard leave: depart Aspen by 3:30pm.</strong> The drive to DEN takes 3.5–4.5hrs in summer traffic through Eisenhower Tunnel — any later and you risk missing the 9pm flight.</div>
+          <div class="stop-desc"><strong>Maroon Bells</strong> — the most photographed peaks in North America. Twin 14,000ft summits reflected in Maroon Lake. Easy 1.8mi loop trail around the lake, or just the viewpoint. <strong>Access (8am–5pm):</strong> private vehicles need a $10/vehicle timed-entry permit to drive in, otherwise take the RFTA shuttle from Aspen Highlands (~$16/adult roundtrip, runs every ~15 min — <strong>advance reservation required</strong>, day-of availability is very limited). Back in Aspen: great town for a quick lunch/coffee — try <strong>Jour de Fête</strong> for pastries or grab a bite on the pedestrian mall. Aspen is fancy but walkable and the mountains are free. <strong>⚠️ Hard leave: depart Aspen by 3:30pm.</strong> The drive to DEN takes 3.5–4.5hrs in summer traffic through Eisenhower Tunnel — any later and you risk missing the 9pm flight.</div>
           <div class="stop-tags">
             <span class="tag tag-scenic">Iconic</span>
             <span class="tag tag-hike">Easy Walk</span>
