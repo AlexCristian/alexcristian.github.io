@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goleta · Jun 28–Jul 5</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+  :root {
+    --bg: #f7f5f0;
+    --card: #ffffff;
+    --accent: #1a4a6b;
+    --accent-light: #e6eef5;
+    --amber: #c8773a;
+    --amber-light: #fdf3ec;
+    --sky: #2a5c7a;
+    --sky-light: #e8f2f8;
+    --slate: #4a4a4a;
+    --muted: #888;
+    --border: #e5e2db;
+    --sleep: #6b5b9e;
+    --sleep-light: #f0eef8;
+    --rest: #a07040;
+    --rest-light: #fdf7ef;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--slate);
+    line-height: 1.6;
+  }
+
+  /* ── Header ── */
+  .trip-header {
+    background: var(--accent);
+    color: white;
+    padding: 48px 40px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .trip-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Cpath d='M0 160 Q50 120 100 160 Q150 200 200 160 Q250 120 300 160 Q350 200 400 160 L400 200 L0 200Z' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E") no-repeat bottom center / cover;
+  }
+  .trip-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    letter-spacing: -0.5px;
+    position: relative;
+  }
+  .trip-header .meta {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    position: relative;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .trip-header .meta span::before {
+    margin-right: 6px;
+  }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  /* ── Day block ── */
+  .day-block {
+    margin-bottom: 48px;
+  }
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .day-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--accent);
+  }
+  .day-date {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── Timeline ── */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 28px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 16px;
+    bottom: 16px;
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* ── Drive segment ── */
+  .drive-segment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    position: relative;
+  }
+  .drive-segment .map-embed {
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
+  }
+  .drive-segment .map-embed iframe { height: 180px; border-radius: 10px; }
+  .drive-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--amber);
+    border: 3px solid var(--bg);
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 0 2px var(--amber);
+  }
+  .drive-pill {
+    background: var(--amber-light);
+    border: 1px solid #e8c9a8;
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 0.8rem;
+    color: var(--amber);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .drive-pill a {
+    color: var(--amber);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .drive-pill a:hover { text-decoration: underline; }
+
+  /* ── Stop card ── */
+  .stop-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 4px 0;
+    position: relative;
+    transition: box-shadow 0.2s;
+  }
+  .stop-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+  .stop-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    position: absolute;
+    left: -28px;
+    top: 22px;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .stop-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .stop-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #222;
+  }
+  .stop-time {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 500;
+    white-space: nowrap;
+    background: var(--bg);
+    padding: 3px 10px;
+    border-radius: 10px;
+  }
+  .stop-desc {
+    font-size: 0.88rem;
+    color: #666;
+    margin-top: 6px;
+    line-height: 1.55;
+  }
+  .stop-tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .tag {
+    font-size: 0.75rem;
+    padding: 3px 9px;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+  .tag-hike    { background: var(--accent-light); color: var(--accent); }
+  .tag-food    { background: #fef3e2; color: #b06a00; }
+  .tag-scenic  { background: var(--sky-light); color: var(--sky); }
+  .tag-culture { background: #f3eeff; color: #6b4fa8; }
+  .tag-water   { background: #e6f7ff; color: #0077a8; }
+
+  /* ── Buffer blocks ── */
+  .buffer-block {
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 4px 0;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+  }
+  .buffer-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--bg);
+  }
+  .buffer-rest  { background: var(--rest-light); color: var(--rest); }
+  .buffer-rest .buffer-dot  { background: var(--rest); box-shadow: 0 0 0 2px var(--rest); }
+  .buffer-sleep { background: var(--sleep-light); color: var(--sleep); }
+  .buffer-sleep .buffer-dot { background: var(--sleep); box-shadow: 0 0 0 2px var(--sleep); }
+  .buffer-meal  { background: #fff8e6; color: #8a6200; }
+  .buffer-meal .buffer-dot  { background: #c8a040; box-shadow: 0 0 0 2px #c8a040; }
+  .buffer-flex  { background: #f0f4f8; color: #4a6080; }
+  .buffer-flex .buffer-dot  { background: #7090b0; box-shadow: 0 0 0 2px #7090b0; }
+
+  /* ── Airbnb note ── */
+  .airbnb-note {
+    background: var(--sleep-light);
+    border: 1px solid #d0c8e8;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 4px 0;
+    font-size: 0.88rem;
+    color: var(--sleep);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+  }
+  .airbnb-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--sleep);
+    border: 3px solid var(--bg);
+    position: absolute;
+    left: -28px;
+    top: 14px;
+    box-shadow: 0 0 0 2px var(--sleep);
+  }
+  .airbnb-note strong { font-weight: 700; }
+
+  /* ── Map iframe wrapper ── */
+  .map-embed {
+    margin-top: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .map-embed iframe {
+    width: 100%;
+    height: 200px;
+    display: block;
+    border: none;
+  }
+  .map-embed.trail iframe { height: 340px; }
+
+  /* ── Options callout ── */
+  .options-callout {
+    background: var(--sky-light);
+    border: 1px solid #bcd8e8;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 12px 0 4px;
+    font-size: 0.85rem;
+    color: var(--sky);
+    position: relative;
+  }
+  .options-callout .buffer-dot { background: var(--sky); box-shadow: 0 0 0 2px var(--sky); }
+  .options-callout strong { color: var(--sky); font-weight: 700; }
+  .options-callout ul { margin: 6px 0 0 16px; }
+  .options-callout li { margin-bottom: 3px; }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 32px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+
+  /* ── Alternatives drawer ── */
+  .stop-card:has(+ .alt-drawer) { border-radius: 12px 12px 0 0; }
+  .alt-drawer { margin: -6px 0 6px; position: relative; }
+  .alt-toggle {
+    background: #eeebe5;
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    padding: 7px 16px;
+    cursor: pointer;
+    font-size: 0.76rem;
+    color: #999;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    transition: background 0.15s, color 0.15s;
+    gap: 8px;
+    width: 100%;
+    font-family: inherit;
+  }
+  .alt-toggle:hover { background: #e4e0d8; color: #666; }
+  .alt-toggle .alt-names { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .alt-toggle .arrow { transition: transform 0.25s; font-size: 0.65rem; flex-shrink: 0; }
+  .alt-toggle.open .arrow { transform: rotate(180deg); }
+  .alt-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.32s ease;
+    background: #f8f6f1;
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+  }
+  .alt-content.open { max-height: 600px; }
+  .alt-list { padding: 12px 16px 14px; display: flex; flex-direction: column; gap: 10px; }
+  .alt-item { font-size: 0.82rem; line-height: 1.5; color: #666; }
+  .alt-item strong { color: #333; font-weight: 600; }
+  .alt-item .alt-tag {
+    font-size: 0.7rem; font-weight: 600; padding: 1px 7px; border-radius: 8px;
+    background: var(--accent-light); color: var(--accent); margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* ── Carousel ── */
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 12px 0 14px;
+    height: 220px;
+    background: #d8d4cc;
+  }
+  .carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.45s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
+  }
+  .carousel-track img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+  }
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.35);
+    color: white;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background 0.2s;
+    line-height: 1;
+    padding: 0;
+  }
+  .carousel-btn:hover { background: rgba(0,0,0,0.6); }
+  .carousel-prev { left: 8px; }
+  .carousel-next { right: 8px; }
+  .carousel-dots {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 2;
+  }
+  .carousel-dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .carousel-dots .dot.active {
+    background: white;
+    transform: scale(1.3);
+  }
+  .carousel-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.45));
+    color: rgba(255,255,255,0.85);
+    font-size: 0.7rem;
+    padding: 20px 10px 22px;
+    pointer-events: none;
+  }
+
+  /* ── AllTrails badge ── */
+  .alltrails-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #2e5e20;
+    background: #e4f0db;
+    border: 1px solid #b5d49a;
+    border-radius: 10px;
+    padding: 3px 10px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .alltrails-link:hover { background: #cfe6be; }
+
+  /* ── Booking checklist ── */
+  .booking-checklist {
+    background: var(--amber-light);
+    border: 2px solid var(--amber);
+    border-radius: 14px;
+    padding: 22px 26px 18px;
+    margin-bottom: 44px;
+  }
+  .bc-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+  }
+  .bc-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--amber);
+    flex: 1;
+  }
+  .bc-toggle-hint {
+    font-size: 0.75rem;
+    color: #b07840;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .bc-arrow {
+    font-size: 0.65rem;
+    color: var(--amber);
+    transition: transform 0.25s;
+    flex-shrink: 0;
+  }
+  .bc-toggle.open .bc-arrow { transform: rotate(180deg); }
+  .bc-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .bc-body.open { max-height: 6000px; }
+  .bc-subtitle {
+    font-size: 0.8rem;
+    color: #9a6030;
+    margin: 10px 0 16px;
+  }
+  .bc-section {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: var(--muted);
+    margin: 14px 0 4px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border);
+  }
+  .bc-row {
+    display: grid;
+    grid-template-columns: 10px 1fr auto;
+    gap: 5px 12px;
+    align-items: start;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(200,119,58,0.12);
+  }
+  .bc-row:last-child { border-bottom: none; }
+  .bc-urgency { width: 10px; height: 10px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
+  .bc-urgency.red    { background: #d63c3c; box-shadow: 0 0 0 2px rgba(214,60,60,0.2); }
+  .bc-urgency.amber  { background: var(--amber); box-shadow: 0 0 0 2px rgba(200,119,58,0.2); }
+  .bc-urgency.green  { background: #4e9460; box-shadow: 0 0 0 2px rgba(78,148,96,0.2); }
+  .bc-urgency.blue   { background: var(--sky); box-shadow: 0 0 0 2px rgba(42,92,122,0.2); }
+  .bc-name { font-size: 0.86rem; font-weight: 600; color: #2a2a2a; line-height: 1.4; }
+  .bc-name a { color: #2a2a2a; text-decoration: none; }
+  .bc-name a:hover { text-decoration: underline; }
+  .bc-meta { font-size: 0.76rem; color: #7a5030; margin-top: 1px; line-height: 1.4; }
+  .bc-day {
+    font-size: 0.72rem; font-weight: 700; color: var(--accent);
+    background: var(--accent-light); padding: 2px 8px;
+    border-radius: 8px; white-space: nowrap; margin-top: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .trip-header { padding: 32px 20px; }
+    .trip-header h1 { font-size: 2rem; }
+    .container { padding: 24px 16px; }
+    .carousel { height: 180px; }
+    .bc-row { grid-template-columns: 10px 1fr; }
+    .bc-day { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="trip-header">
+  <h1>🌊 Goleta · Santa Barbara</h1>
+  <div class="meta">
+    <span>📅 Jun 28–Jul 5, 2026</span>
+    <span>🚗 Rental Car · LAX</span>
+    <span>📍 Airbnb · Goleta</span>
+    <span>🏢 Google Office · Goleta</span>
+    <span>🎆 4th of July with friends</span>
+  </div>
+</header>
+
+<div class="container">
+<!-- content will go here -->
+</div>
+
+<footer>
+  Goleta · Santa Barbara · Jun 28–Jul 5, 2026 · Rental Car · Last updated Jun 2026
+</footer>
+
+<script>
+  document.querySelector('.bc-toggle').addEventListener('click', function() {
+    this.classList.toggle('open');
+    this.nextElementSibling.classList.toggle('open');
+    this.setAttribute('aria-expanded', this.classList.contains('open'));
+  });
+
+  document.querySelectorAll('.alt-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open');
+      btn.nextElementSibling.classList.toggle('open');
+      btn.setAttribute('aria-expanded', btn.classList.contains('open'));
+    });
+  });
+
+  document.querySelectorAll('a[target="_blank"]').forEach(a => { a.rel = 'noopener noreferrer'; });
+
+  document.querySelectorAll('iframe').forEach((fr, i) => {
+    if (!fr.title) {
+      if (fr.src.includes('komoot')) fr.title = 'Trail map';
+      else if (fr.src.includes('maps.google') || fr.src.includes('google.com/maps')) fr.title = 'Driving directions map';
+      else fr.title = 'Map';
+    }
+  });
+
+  document.querySelectorAll('.carousel').forEach(car => {
+    const track = car.querySelector('.carousel-track');
+    const imgs = track.querySelectorAll('img');
+    const dots = car.querySelectorAll('.dot');
+    let idx = 0, timer;
+
+    car.querySelector('.carousel-prev').setAttribute('aria-label', 'Previous photo');
+    car.querySelector('.carousel-next').setAttribute('aria-label', 'Next photo');
+
+    dots.forEach((d, i) => {
+      d.setAttribute('role', 'button');
+      d.setAttribute('tabindex', '0');
+      d.setAttribute('aria-label', 'Photo ' + (i + 1));
+    });
+
+    function goTo(n) {
+      idx = ((n % imgs.length) + imgs.length) % imgs.length;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }
+    function startAuto() {
+      clearInterval(timer);
+      timer = setInterval(() => goTo(idx + 1), 4500);
+    }
+
+    car.querySelector('.carousel-prev').addEventListener('click', () => { goTo(idx - 1); startAuto(); });
+    car.querySelector('.carousel-next').addEventListener('click', () => { goTo(idx + 1); startAuto(); });
+    dots.forEach((d, i) => {
+      d.addEventListener('click', () => { goTo(i); startAuto(); });
+      d.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goTo(i); startAuto(); } });
+    });
+    if (car.hasAttribute('data-autoplay')) startAuto();
+  });
+
+  // Mark decorative timeline/card dots as presentational
+  document.querySelectorAll('.stop-dot, .drive-dot, .buffer-dot, .airbnb-dot').forEach(d => d.setAttribute('aria-hidden', 'true'));
+</script>
+</body>
+</html>
