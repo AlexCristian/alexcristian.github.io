@@ -469,11 +469,65 @@
   }
   .alltrails-link:hover { background: #cfe6be; }
 
+  /* ── Booking checklist ── */
+  .booking-checklist {
+    background: var(--amber-light);
+    border: 2px solid var(--amber);
+    border-radius: 14px;
+    padding: 22px 26px 18px;
+    margin-bottom: 44px;
+  }
+  .bc-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--amber);
+    margin-bottom: 3px;
+  }
+  .bc-subtitle {
+    font-size: 0.8rem;
+    color: #9a6030;
+    margin-bottom: 16px;
+  }
+  .bc-section {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: var(--muted);
+    margin: 14px 0 4px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border);
+  }
+  .bc-row {
+    display: grid;
+    grid-template-columns: 10px 1fr auto;
+    gap: 5px 12px;
+    align-items: start;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(200,119,58,0.12);
+  }
+  .bc-row:last-child { border-bottom: none; }
+  .bc-urgency { width: 10px; height: 10px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
+  .bc-urgency.red    { background: #d63c3c; box-shadow: 0 0 0 2px rgba(214,60,60,0.2); }
+  .bc-urgency.amber  { background: var(--amber); box-shadow: 0 0 0 2px rgba(200,119,58,0.2); }
+  .bc-urgency.green  { background: #4e9460; box-shadow: 0 0 0 2px rgba(78,148,96,0.2); }
+  .bc-name { font-size: 0.86rem; font-weight: 600; color: #2a2a2a; line-height: 1.4; }
+  .bc-name a { color: #2a2a2a; text-decoration: none; }
+  .bc-name a:hover { text-decoration: underline; }
+  .bc-meta { font-size: 0.76rem; color: #7a5030; margin-top: 1px; line-height: 1.4; }
+  .bc-day {
+    font-size: 0.72rem; font-weight: 700; color: var(--accent);
+    background: var(--accent-light); padding: 2px 8px;
+    border-radius: 8px; white-space: nowrap; margin-top: 2px;
+  }
+
   @media (max-width: 600px) {
     .trip-header { padding: 32px 20px; }
     .trip-header h1 { font-size: 2rem; }
     .container { padding: 24px 16px; }
     .carousel { height: 180px; }
+    .bc-row { grid-template-columns: 10px 1fr; }
+    .bc-day { display: none; }
   }
 </style>
 </head>
@@ -490,6 +544,129 @@
 </header>
 
 <div class="container">
+
+  <!-- ═══════════════════════════════════
+       BOOKING CHECKLIST
+  ════════════════════════════════════ -->
+  <div class="booking-checklist">
+    <div class="bc-heading">📋 Book Before You Go</div>
+    <div class="bc-subtitle">🔴 = sells out fast — book the moment dates are confirmed &nbsp;·&nbsp; 🟡 = book 2–4 weeks out &nbsp;·&nbsp; 🟢 = walk-in / pay at gate OK</div>
+
+    <div class="bc-section">🔴 Sells out — book immediately</div>
+
+    <div class="bc-row">
+      <span class="bc-urgency red"></span>
+      <div>
+        <div class="bc-name"><a href="https://www.recreation.gov" target="_blank">RMNP "Timed Entry + Bear Lake Road Corridor" permit ↗</a></div>
+        <div class="bc-meta">~4 weeks out · $2/vehicle · sells within minutes of monthly batch opening · recreation.gov · <strong>must get this specific permit type</strong> or private vehicles are turned back</div>
+      </div>
+      <span class="bc-day">Day 2</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency red"></span>
+      <div>
+        <div class="bc-name"><a href="https://www.cograilway.com" target="_blank">Pikes Peak Cog Railway ↗</a> <span style="font-weight:400;color:#9a6030;font-size:0.78rem;">(if chosen over Manitou Springs walkabout)</span></div>
+        <div class="bc-meta">Weeks ahead · ~$40/person · sells out · departs Manitou Springs, 3.5hr round trip</div>
+      </div>
+      <span class="bc-day">Day 3</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency red"></span>
+      <div>
+        <div class="bc-name">Frasca Food &amp; Wine reservation <span style="font-weight:400;color:#9a6030;font-size:0.78rem;">(if chosen as dinner alt)</span></div>
+        <div class="bc-meta">Weeks to months ahead · James Beard–nominated · book via OpenTable or direct</div>
+      </div>
+      <span class="bc-day">Day 1–2</span>
+    </div>
+
+    <div class="bc-section">🟡 Book 2–4 weeks out</div>
+
+    <div class="bc-row">
+      <span class="bc-urgency amber"></span>
+      <div>
+        <div class="bc-name">Boulder Airbnb (≥2 beds, Central Boulder / Pearl Street area)</div>
+        <div class="bc-meta">4–8 weeks out · peak summer weekend · backup: North Boulder near Chautauqua</div>
+      </div>
+      <span class="bc-day">Days 1–3</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency amber"></span>
+      <div>
+        <div class="bc-name">Rental car — AWD</div>
+        <div class="bc-meta">4–8 weeks out · Hertz ~$50/day · Avis ~$70/day · Group B keeps it through Day 4</div>
+      </div>
+      <span class="bc-day">Days 1–4</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency amber"></span>
+      <div>
+        <div class="bc-name">Clear Creek Whitewater Rafting — 4pm afternoon slot</div>
+        <div class="bc-meta">1–2 weeks out · ~$60–80/person · outfitters: Clear Creek Rafting, AVA, Blazing Adventures · afternoon slots fill fast</div>
+      </div>
+      <span class="bc-day">Day 1</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency amber"></span>
+      <div>
+        <div class="bc-name">Boulder Dushanbe Teahouse — lunch reservation</div>
+        <div class="bc-meta">1–2 weeks out · 1pm seating · busy on Fridays · call ahead or OpenTable</div>
+      </div>
+      <span class="bc-day">Day 1</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency amber"></span>
+      <div>
+        <div class="bc-name">Glenwood Springs lodging — Group B (Hotel Denver or Glenwood Hot Springs Lodge)</div>
+        <div class="bc-meta">2–4 weeks out · ~$100–150/night · arrive ~11:30pm Sun · Hot Springs Lodge = pool access first thing Mon</div>
+      </div>
+      <span class="bc-day">Day 3 night</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency amber"></span>
+      <div>
+        <div class="bc-name"><a href="https://www.recreation.gov" target="_blank">Maroon Bells timed-entry vehicle permit ↗</a> — Group B <span style="font-weight:400;color:#9a6030;font-size:0.78rem;">(or skip and take the shuttle)</span></div>
+        <div class="bc-meta">1–2 weeks out · $10/vehicle · required 8am–5pm · alternative: RFTA shuttle from Aspen Highlands ~$8 roundtrip, no permit needed</div>
+      </div>
+      <span class="bc-day">Day 4</span>
+    </div>
+
+    <div class="bc-section">🟢 Walk-in / pay at gate</div>
+
+    <div class="bc-row">
+      <span class="bc-urgency green"></span>
+      <div>
+        <div class="bc-name">RMNP park entry fee</div>
+        <div class="bc-meta">Pay at gate or advance · $35/vehicle · separate from timed-entry permit above</div>
+      </div>
+      <span class="bc-day">Day 2</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency green"></span>
+      <div>
+        <div class="bc-name">Indian Hot Springs — admission</div>
+        <div class="bc-meta">Walk-in OK · confirm hours in advance · ~$25–35/person</div>
+      </div>
+      <span class="bc-day">Day 3</span>
+    </div>
+
+    <div class="bc-row">
+      <span class="bc-urgency green"></span>
+      <div>
+        <div class="bc-name">Glenwood Hot Springs Pool — Group B</div>
+        <div class="bc-meta">Walk-in OK · ~$38–55/person · Vapor Caves add-on ~$18 extra</div>
+      </div>
+      <span class="bc-day">Day 4</span>
+    </div>
+
+  </div>
 
   <!-- ═══════════════════════════════════
        DAY 1 — Jun 19 (Friday)
