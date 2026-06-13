@@ -477,16 +477,47 @@
     padding: 22px 26px 18px;
     margin-bottom: 44px;
   }
+  .bc-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+  }
   .bc-heading {
     font-family: 'Playfair Display', serif;
     font-size: 1.25rem;
     color: var(--amber);
-    margin-bottom: 3px;
+    flex: 1;
   }
+  .bc-toggle-hint {
+    font-size: 0.75rem;
+    color: #b07840;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .bc-arrow {
+    font-size: 0.65rem;
+    color: var(--amber);
+    transition: transform 0.25s;
+    flex-shrink: 0;
+  }
+  .bc-toggle.open .bc-arrow { transform: rotate(180deg); }
+  .bc-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .bc-body.open { max-height: 6000px; }
   .bc-subtitle {
     font-size: 0.8rem;
     color: #9a6030;
-    margin-bottom: 16px;
+    margin: 10px 0 16px;
   }
   .bc-section {
     font-size: 0.7rem;
@@ -550,7 +581,12 @@
        BOOKING CHECKLIST
   ════════════════════════════════════ -->
   <div class="booking-checklist">
-    <div class="bc-heading">📋 Book Before You Go</div>
+    <button class="bc-toggle" type="button" aria-expanded="false">
+      <span class="bc-heading">📋 Book Before You Go</span>
+      <span class="bc-toggle-hint">5 🔴 · 7 🟡 · 4 🟢 · 6 🔵 — 22 items</span>
+      <span class="bc-arrow">▼</span>
+    </button>
+    <div class="bc-body">
     <div class="bc-subtitle">🔴 sells out — book immediately &nbsp;·&nbsp; 🟡 book 2–4 weeks out &nbsp;·&nbsp; 🟢 walk-in / pay at gate &nbsp;·&nbsp; 🔵 only needed if you choose that alt</div>
 
     <div class="bc-section">🔴 Sells out — book the moment dates are confirmed</div>
@@ -759,6 +795,7 @@
       <span class="bc-day">Day 4 alt</span>
     </div>
 
+    </div><!-- end bc-body -->
   </div>
 
   <!-- ═══════════════════════════════════
@@ -1468,6 +1505,12 @@
 </footer>
 
 <script>
+  document.querySelector('.bc-toggle').addEventListener('click', function() {
+    this.classList.toggle('open');
+    this.nextElementSibling.classList.toggle('open');
+    this.setAttribute('aria-expanded', this.classList.contains('open'));
+  });
+
   document.querySelectorAll('.alt-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
       btn.classList.toggle('open');
