@@ -77,9 +77,10 @@ Each day: work at Google Goleta office. Evenings structured as deliberate probes
 
 | Interest | How it appears in plan |
 |----------|----------------------|
-| Hockey | Sports bar scout for a regular spot (NHL offseason — find the bar you'd watch games at in October) |
+| Hockey | Visit a local ice rink; check adult league schedules (UCSB Ice Arena or similar); see if a local/college drop-in game is available — user plays hockey, not just watches |
 | Shooting | Wed evening: local pistol/rifle range (verify: Santa Barbara Rifle & Pistol Club or similar) |
 | Jazz | Tue evening: SOhO Restaurant & Music Club, SB's main jazz/live music venue |
+| Country music | Alt drawer or evening option: find a country night or venue in the SB area (verify — may be limited, but worth scouting for relocation fit) |
 | Classical music | Alt drawer: Lobero Theatre, Granada Theatre (verify Jul programming) |
 | Woodworking | Thu evening: makerspace or hobby shop (verify: Rockler/Woodcraft presence in SB area, or UCSB makerspace) |
 | Hiking | Weekend primary + alt drawers on multiple days |
@@ -138,6 +139,8 @@ Follow Colorado plan exactly:
 - Inspiration Point: current trail conditions, parking
 - Rattlesnake Canyon: permit requirements (none expected but verify)
 - Lobero / Granada: July 2026 programming
+- Ice rinks near Goleta: UCSB Ice Arena public skate/drop-in hours, adult league schedules
+- Country music venues in SB: any regular country nights or dedicated venues
 - Car rental LAX: pickup logistics (on-site vs. shuttle)
 
 ---
